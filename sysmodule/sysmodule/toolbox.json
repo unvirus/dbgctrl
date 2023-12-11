@@ -1,0 +1,5 @@
+{
+    "name"  : "sysmodule",
+    "tid"   : "4200000000000123",
+    "requires_reboot": false
+}
