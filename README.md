@@ -5,7 +5,7 @@ Nintendo Switch Debugger Library.
 [Here](https://unvirus.github.io/dbgctrl/index.html)  
 
 ## Sample Source Code  
-Template can be found [here](https://github.com/unvirus/dbgctrl/tree/main/sysmodule).  
+Template is [here](https://github.com/unvirus/dbgctrl/tree/main/sysmodule).  
 The original source code is [here](https://github.com/switchbrew/switch-examples/tree/master/templates/sysmodule).  
 
 ## Configure
