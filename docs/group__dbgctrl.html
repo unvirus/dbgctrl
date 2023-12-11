@@ -1,0 +1,1133 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>dbgctrl: Dbgctrl</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">dbgctrl
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#typedef-members">型定義</a> &#124;
+<a href="#enum-members">列挙型</a> &#124;
+<a href="#func-members">関数</a>  </div>
+  <div class="headertitle"><div class="title">Dbgctrl</div></div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+型定義</h2></td></tr>
+<tr class="memitem:ga4681d0eb1876b1dfadbfd7c1babf1954" id="r_ga4681d0eb1876b1dfadbfd7c1babf1954"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="group__dbgctrl.html#ga2086563d25e6183a2c5c42033c2f8e6e">DEBUG_CB_TYPE</a>(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dbgctrl.html#ga4681d0eb1876b1dfadbfd7c1babf1954">DEBUG_EVENT_CALLBACK</a>) (<a class="el" href="group__dbgctrl.html#ga8fbaa92b672b110f3adc007ab2782b21">DEBUG_EVENT</a> evt, u64 thread_id, u64 addr, void *arg)</td></tr>
+<tr class="memdesc:ga4681d0eb1876b1dfadbfd7c1babf1954"><td class="mdescLeft">&#160;</td><td class="mdescRight">イベントコールバック。  <br /></td></tr>
+<tr class="separator:ga4681d0eb1876b1dfadbfd7c1babf1954"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
+列挙型</h2></td></tr>
+<tr class="memitem:ga8fbaa92b672b110f3adc007ab2782b21" id="r_ga8fbaa92b672b110f3adc007ab2782b21"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dbgctrl.html#ga8fbaa92b672b110f3adc007ab2782b21">DEBUG_EVENT</a> { <a class="el" href="group__dbgctrl.html#gga8fbaa92b672b110f3adc007ab2782b21a997c55781b6169cba76db9f6decfdf40">EVT_TARGET_CONNECT</a> = 0
+, <a class="el" href="group__dbgctrl.html#gga8fbaa92b672b110f3adc007ab2782b21ae94a7f5e45c7eacb63f1a597d793f448">EVT_TARGET_DISCONNECT</a>
+, <a class="el" href="group__dbgctrl.html#gga8fbaa92b672b110f3adc007ab2782b21a22b26075cc87db9229a86cb0335e7e2b">EVT_BREAK_POINT</a>
+, <a class="el" href="group__dbgctrl.html#gga8fbaa92b672b110f3adc007ab2782b21a3f80e4793a0f6e201475874c631ac8d2">EVT_WATCH_POINT</a>
+ }</td></tr>
+<tr class="memdesc:ga8fbaa92b672b110f3adc007ab2782b21"><td class="mdescLeft">&#160;</td><td class="mdescRight">コールバックイベント  <a href="group__dbgctrl.html#ga8fbaa92b672b110f3adc007ab2782b21">[詳解]</a><br /></td></tr>
+<tr class="separator:ga8fbaa92b672b110f3adc007ab2782b21"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1d9128302618cb4dc1ad6712e7758b69" id="r_ga1d9128302618cb4dc1ad6712e7758b69"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dbgctrl.html#ga1d9128302618cb4dc1ad6712e7758b69">WATCH_POINT_DIR</a> { <a class="el" href="group__dbgctrl.html#gga1d9128302618cb4dc1ad6712e7758b69a4471b2253588d06acc57c86b60e60fdc">WATCH_POINT_READ</a> = 0x01
+, <a class="el" href="group__dbgctrl.html#gga1d9128302618cb4dc1ad6712e7758b69aaba6c280ad5266d4c6e201a6a5420244">WATCH_POINT_WRITE</a>
+, <a class="el" href="group__dbgctrl.html#gga1d9128302618cb4dc1ad6712e7758b69a0f804c4c61c207732029142814e96ac3">WATCH_POINT_RW</a>
+ }</td></tr>
+<tr class="memdesc:ga1d9128302618cb4dc1ad6712e7758b69"><td class="mdescLeft">&#160;</td><td class="mdescRight">ウオッチポイント方向  <a href="group__dbgctrl.html#ga1d9128302618cb4dc1ad6712e7758b69">[詳解]</a><br /></td></tr>
+<tr class="separator:ga1d9128302618cb4dc1ad6712e7758b69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gacd0a4168bef2892463390ec7c40b3af3" id="r_gacd0a4168bef2892463390ec7c40b3af3"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dbgctrl.html#gacd0a4168bef2892463390ec7c40b3af3">WATCH_POINT_SIZE</a> { <a class="el" href="group__dbgctrl.html#ggacd0a4168bef2892463390ec7c40b3af3a5ae5d9eeb327ba2da47bc44f8a3dd40d">WATCH_POINT_BYTE</a> = 0x01
+, <a class="el" href="group__dbgctrl.html#ggacd0a4168bef2892463390ec7c40b3af3a7ba86e6282ff5213449351d78c49006f">WATCH_POINT_WORD</a> = 0x02
+, <a class="el" href="group__dbgctrl.html#ggacd0a4168bef2892463390ec7c40b3af3a3636f8fa37b3451dafd28c2978c212fb">WATCH_POINT_DWORD</a> = 0x04
+, <a class="el" href="group__dbgctrl.html#ggacd0a4168bef2892463390ec7c40b3af3a3320dddb891c6a4848e9559caacc0586">WATCH_POINT_QWORD</a> = 0x08
+ }</td></tr>
+<tr class="memdesc:gacd0a4168bef2892463390ec7c40b3af3"><td class="mdescLeft">&#160;</td><td class="mdescRight">ウオッチポイントサイズ  <a href="group__dbgctrl.html#gacd0a4168bef2892463390ec7c40b3af3">[詳解]</a><br /></td></tr>
+<tr class="separator:gacd0a4168bef2892463390ec7c40b3af3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2086563d25e6183a2c5c42033c2f8e6e" id="r_ga2086563d25e6183a2c5c42033c2f8e6e"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dbgctrl.html#ga2086563d25e6183a2c5c42033c2f8e6e">DEBUG_CB_TYPE</a> { <a class="el" href="group__dbgctrl.html#gga2086563d25e6183a2c5c42033c2f8e6ea59a389efb7f93e9e3d256953a15f63dc">DEBUG_CB_ERROR</a> = -1
+, <a class="el" href="group__dbgctrl.html#gga2086563d25e6183a2c5c42033c2f8e6ea6c367604a53e4411656f8e1fb1847964">DEBUG_CB_STOP</a> = 0
+, <a class="el" href="group__dbgctrl.html#gga2086563d25e6183a2c5c42033c2f8e6ea9acb2929b331d63e667a4f38001add33">DEBUG_CB_CONTINUE</a>
+ }</td></tr>
+<tr class="memdesc:ga2086563d25e6183a2c5c42033c2f8e6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">コールバックステータス  <a href="group__dbgctrl.html#ga2086563d25e6183a2c5c42033c2f8e6e">[詳解]</a><br /></td></tr>
+<tr class="separator:ga2086563d25e6183a2c5c42033c2f8e6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+関数</h2></td></tr>
+<tr class="memitem:gac7f2f3909b9dd640c40b692cb1077646" id="r_gac7f2f3909b9dd640c40b692cb1077646"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dbgctrl.html#gac7f2f3909b9dd640c40b692cb1077646">DcInit</a> (void)</td></tr>
+<tr class="memdesc:gac7f2f3909b9dd640c40b692cb1077646"><td class="mdescLeft">&#160;</td><td class="mdescRight">ライブラリの動作に必要なモジュールを初期化する。  <br /></td></tr>
+<tr class="separator:gac7f2f3909b9dd640c40b692cb1077646"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga34fed525888d84485fa56ff8a8e2a11b" id="r_ga34fed525888d84485fa56ff8a8e2a11b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dbgctrl.html#ga34fed525888d84485fa56ff8a8e2a11b">DcDeinit</a> (void)</td></tr>
+<tr class="memdesc:ga34fed525888d84485fa56ff8a8e2a11b"><td class="mdescLeft">&#160;</td><td class="mdescRight">ライブラリ終了時にモジュールを開放する。  <br /></td></tr>
+<tr class="separator:ga34fed525888d84485fa56ff8a8e2a11b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaba1f48209d6295a683bd4893c69bc57b" id="r_gaba1f48209d6295a683bd4893c69bc57b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dbgctrl.html#gaba1f48209d6295a683bd4893c69bc57b">DcLogStart</a> (const char *name)</td></tr>
+<tr class="memdesc:gaba1f48209d6295a683bd4893c69bc57b"><td class="mdescLeft">&#160;</td><td class="mdescRight">ログ取得を開始する。  <br /></td></tr>
+<tr class="separator:gaba1f48209d6295a683bd4893c69bc57b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac3905adf8f77b65991caa79e00816ced" id="r_gac3905adf8f77b65991caa79e00816ced"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dbgctrl.html#gac3905adf8f77b65991caa79e00816ced">DcLogStop</a> (void)</td></tr>
+<tr class="memdesc:gac3905adf8f77b65991caa79e00816ced"><td class="mdescLeft">&#160;</td><td class="mdescRight">ログ取得を停止する。  <br /></td></tr>
+<tr class="separator:gac3905adf8f77b65991caa79e00816ced"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga42ade5ab84122e8a90685605f7648c60" id="r_ga42ade5ab84122e8a90685605f7648c60"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dbgctrl.html#ga42ade5ab84122e8a90685605f7648c60">DcLogPrint</a> (const char *fmt,...)</td></tr>
+<tr class="memdesc:ga42ade5ab84122e8a90685605f7648c60"><td class="mdescLeft">&#160;</td><td class="mdescRight">ログを出力する。  <br /></td></tr>
+<tr class="separator:ga42ade5ab84122e8a90685605f7648c60"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5c6a5e25ed45f46443e838376a118384" id="r_ga5c6a5e25ed45f46443e838376a118384"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dbgctrl.html#ga5c6a5e25ed45f46443e838376a118384">DcTargetConnect</a> (u64 tid, s32 priority, <a class="el" href="group__dbgctrl.html#ga4681d0eb1876b1dfadbfd7c1babf1954">DEBUG_EVENT_CALLBACK</a> callback, void *arg)</td></tr>
+<tr class="memdesc:ga5c6a5e25ed45f46443e838376a118384"><td class="mdescLeft">&#160;</td><td class="mdescRight">アプリケーションに接続する。  <br /></td></tr>
+<tr class="separator:ga5c6a5e25ed45f46443e838376a118384"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaae7f8e15a638c4fdc638a28fdd7c3501" id="r_gaae7f8e15a638c4fdc638a28fdd7c3501"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dbgctrl.html#gaae7f8e15a638c4fdc638a28fdd7c3501">DcTargetDisconnect</a> (void)</td></tr>
+<tr class="memdesc:gaae7f8e15a638c4fdc638a28fdd7c3501"><td class="mdescLeft">&#160;</td><td class="mdescRight">アプリケーションから切断する。  <br /></td></tr>
+<tr class="separator:gaae7f8e15a638c4fdc638a28fdd7c3501"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac0da8da2ab96df980f0d8ee6a024e328" id="r_gac0da8da2ab96df980f0d8ee6a024e328"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dbgctrl.html#gac0da8da2ab96df980f0d8ee6a024e328">DcIsProcessing</a> (u64 timeout)</td></tr>
+<tr class="memdesc:gac0da8da2ab96df980f0d8ee6a024e328"><td class="mdescLeft">&#160;</td><td class="mdescRight">動作状況を取得する。  <br /></td></tr>
+<tr class="separator:gac0da8da2ab96df980f0d8ee6a024e328"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3ae569f087036d897f97340d5e040a3e" id="r_ga3ae569f087036d897f97340d5e040a3e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dbgctrl.html#ga3ae569f087036d897f97340d5e040a3e">DcDebugContinue</a> (u64 thread_id)</td></tr>
+<tr class="memdesc:ga3ae569f087036d897f97340d5e040a3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">実行を再開する。  <br /></td></tr>
+<tr class="separator:ga3ae569f087036d897f97340d5e040a3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gafa1edd9b9c097efde9206c32db6c282c" id="r_gafa1edd9b9c097efde9206c32db6c282c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dbgctrl.html#gafa1edd9b9c097efde9206c32db6c282c">DcMemRead</a> (u64 addr, void *data, u64 len)</td></tr>
+<tr class="memdesc:gafa1edd9b9c097efde9206c32db6c282c"><td class="mdescLeft">&#160;</td><td class="mdescRight">メモリを読み込む。  <br /></td></tr>
+<tr class="separator:gafa1edd9b9c097efde9206c32db6c282c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga78db29a6dc87100711302838a6f94aeb" id="r_ga78db29a6dc87100711302838a6f94aeb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dbgctrl.html#ga78db29a6dc87100711302838a6f94aeb">DcMemWrite</a> (u64 addr, void *data, u64 len)</td></tr>
+<tr class="memdesc:ga78db29a6dc87100711302838a6f94aeb"><td class="mdescLeft">&#160;</td><td class="mdescRight">メモリに書き込む。  <br /></td></tr>
+<tr class="separator:ga78db29a6dc87100711302838a6f94aeb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7115d9d4178a0984fca4d02e6661846a" id="r_ga7115d9d4178a0984fca4d02e6661846a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dbgctrl.html#ga7115d9d4178a0984fca4d02e6661846a">DcGetBaseAddress</a> (u64 *addr)</td></tr>
+<tr class="memdesc:ga7115d9d4178a0984fca4d02e6661846a"><td class="mdescLeft">&#160;</td><td class="mdescRight">ベースアドレスを取得する。  <br /></td></tr>
+<tr class="separator:ga7115d9d4178a0984fca4d02e6661846a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad62cb14373b24f103e09cd8ccaa48b25" id="r_gad62cb14373b24f103e09cd8ccaa48b25"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dbgctrl.html#gad62cb14373b24f103e09cd8ccaa48b25">DcGetPid</a> (u64 *pid)</td></tr>
+<tr class="memdesc:gad62cb14373b24f103e09cd8ccaa48b25"><td class="mdescLeft">&#160;</td><td class="mdescRight">プロセスIDを取得する。  <br /></td></tr>
+<tr class="separator:gad62cb14373b24f103e09cd8ccaa48b25"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7e595532a14722234df90386a00f2f8e" id="r_ga7e595532a14722234df90386a00f2f8e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dbgctrl.html#ga7e595532a14722234df90386a00f2f8e">DcGetHandle</a> (Handle *handle)</td></tr>
+<tr class="memdesc:ga7e595532a14722234df90386a00f2f8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">デバッグハンドルを取得する。  <br /></td></tr>
+<tr class="separator:ga7e595532a14722234df90386a00f2f8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga72768d12be39c40add8aad06352ec0e6" id="r_ga72768d12be39c40add8aad06352ec0e6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dbgctrl.html#ga72768d12be39c40add8aad06352ec0e6">DcGetProcessHandle</a> (Handle *handle)</td></tr>
+<tr class="memdesc:ga72768d12be39c40add8aad06352ec0e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">プロセスハンドルを取得する。  <br /></td></tr>
+<tr class="separator:ga72768d12be39c40add8aad06352ec0e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga66e67da56b54d00b77ec51c2b8cc7553" id="r_ga66e67da56b54d00b77ec51c2b8cc7553"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dbgctrl.html#ga66e67da56b54d00b77ec51c2b8cc7553">DcGetCodeAreaSize</a> (u64 *size)</td></tr>
+<tr class="memdesc:ga66e67da56b54d00b77ec51c2b8cc7553"><td class="mdescLeft">&#160;</td><td class="mdescRight">アプリケーションの.textセクションのサイズを取得する。  <br /></td></tr>
+<tr class="separator:ga66e67da56b54d00b77ec51c2b8cc7553"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4188b18aa78da84f92d80dc2bbf51383" id="r_ga4188b18aa78da84f92d80dc2bbf51383"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dbgctrl.html#ga4188b18aa78da84f92d80dc2bbf51383">DcGetVersion</a> (void)</td></tr>
+<tr class="memdesc:ga4188b18aa78da84f92d80dc2bbf51383"><td class="mdescLeft">&#160;</td><td class="mdescRight">ライブラリバージョンを取得する。  <br /></td></tr>
+<tr class="separator:ga4188b18aa78da84f92d80dc2bbf51383"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa42226ed7e15aa6cfa663a87817fa923" id="r_gaa42226ed7e15aa6cfa663a87817fa923"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dbgctrl.html#gaa42226ed7e15aa6cfa663a87817fa923">DcBreakPoint</a> (u32 index, u64 addr)</td></tr>
+<tr class="memdesc:gaa42226ed7e15aa6cfa663a87817fa923"><td class="mdescLeft">&#160;</td><td class="mdescRight">ブレークポイントを設定する。  <br /></td></tr>
+<tr class="separator:gaa42226ed7e15aa6cfa663a87817fa923"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gadd2cb961bdc5acf7073397cb9b5fc249" id="r_gadd2cb961bdc5acf7073397cb9b5fc249"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dbgctrl.html#gadd2cb961bdc5acf7073397cb9b5fc249">DcWatchPoint</a> (u32 index, u64 addr, <a class="el" href="group__dbgctrl.html#ga1d9128302618cb4dc1ad6712e7758b69">WATCH_POINT_DIR</a> dir, <a class="el" href="group__dbgctrl.html#gacd0a4168bef2892463390ec7c40b3af3">WATCH_POINT_SIZE</a> size)</td></tr>
+<tr class="memdesc:gadd2cb961bdc5acf7073397cb9b5fc249"><td class="mdescLeft">&#160;</td><td class="mdescRight">ウオッチポイントを設定する。  <br /></td></tr>
+<tr class="separator:gadd2cb961bdc5acf7073397cb9b5fc249"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga52501c4d5bb318adfc285633b841b4ce" id="r_ga52501c4d5bb318adfc285633b841b4ce"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dbgctrl.html#ga52501c4d5bb318adfc285633b841b4ce">DcCodeRead</a> (u64 addr, u32 *data)</td></tr>
+<tr class="memdesc:ga52501c4d5bb318adfc285633b841b4ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">プログラムコードを読み込む。  <br /></td></tr>
+<tr class="separator:ga52501c4d5bb318adfc285633b841b4ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0f726bedd90319a856799f3625ff3534" id="r_ga0f726bedd90319a856799f3625ff3534"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dbgctrl.html#ga0f726bedd90319a856799f3625ff3534">DcCodeWrite</a> (u64 addr, u32 *data)</td></tr>
+<tr class="memdesc:ga0f726bedd90319a856799f3625ff3534"><td class="mdescLeft">&#160;</td><td class="mdescRight">プログラムコードを書き込む。  <br /></td></tr>
+<tr class="separator:ga0f726bedd90319a856799f3625ff3534"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<h2 class="groupheader">型定義詳解</h2>
+<a id="ga4681d0eb1876b1dfadbfd7c1babf1954" name="ga4681d0eb1876b1dfadbfd7c1babf1954"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4681d0eb1876b1dfadbfd7c1babf1954">&#9670;&#160;</a></span>DEBUG_EVENT_CALLBACK</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="group__dbgctrl.html#ga2086563d25e6183a2c5c42033c2f8e6e">DEBUG_CB_TYPE</a>(* DEBUG_EVENT_CALLBACK) (<a class="el" href="group__dbgctrl.html#ga8fbaa92b672b110f3adc007ab2782b21">DEBUG_EVENT</a> evt, u64 thread_id, u64 addr, void *arg)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>イベントコールバック。 </p>
+<p>evtの値がEVT_BREAK_POINT、 EVT_WATCH_POINTの時はthread_id、addrに有効な値が入る。</p>
+<p>それ以外の時はthread_id、addrは不定。</p>
+<p>evtの値がEVT_BREAK_POINT、 EVT_WATCH_POINTの時、DEBUG_CB_CONTINUEを返すと処理を続行する。</p>
+<p>DEBUG_CB_STOPを返すと処理は中断したままになる。</p>
+<p>このとき後で、DcDebugContinue()を呼ぶことで処理を再開する。</p>
+<p>argはDcTargetConnect()で指定した引数が入る。</p>
+<p>呼び出し元のスレッドのスタックサイズは16KB。</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">evt</td><td>イベント <br  />
+ </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">thread_id</td><td>スレッドID </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">addr</td><td>アドレス </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">arg</td><td>引数、オプション</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">コールバックステータス</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">列挙型詳解</h2>
+<a id="ga2086563d25e6183a2c5c42033c2f8e6e" name="ga2086563d25e6183a2c5c42033c2f8e6e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2086563d25e6183a2c5c42033c2f8e6e">&#9670;&#160;</a></span>DEBUG_CB_TYPE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group__dbgctrl.html#ga2086563d25e6183a2c5c42033c2f8e6e">DEBUG_CB_TYPE</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>コールバックステータス </p>
+<table class="fieldtable">
+<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="gga2086563d25e6183a2c5c42033c2f8e6ea59a389efb7f93e9e3d256953a15f63dc" name="gga2086563d25e6183a2c5c42033c2f8e6ea59a389efb7f93e9e3d256953a15f63dc"></a>DEBUG_CB_ERROR&#160;</td><td class="fielddoc"><p>エラー、デバッグ中断 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga2086563d25e6183a2c5c42033c2f8e6ea6c367604a53e4411656f8e1fb1847964" name="gga2086563d25e6183a2c5c42033c2f8e6ea6c367604a53e4411656f8e1fb1847964"></a>DEBUG_CB_STOP&#160;</td><td class="fielddoc"><p>動作停止維持 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga2086563d25e6183a2c5c42033c2f8e6ea9acb2929b331d63e667a4f38001add33" name="gga2086563d25e6183a2c5c42033c2f8e6ea9acb2929b331d63e667a4f38001add33"></a>DEBUG_CB_CONTINUE&#160;</td><td class="fielddoc"><p>動作再開 </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="ga8fbaa92b672b110f3adc007ab2782b21" name="ga8fbaa92b672b110f3adc007ab2782b21"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8fbaa92b672b110f3adc007ab2782b21">&#9670;&#160;</a></span>DEBUG_EVENT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group__dbgctrl.html#ga8fbaa92b672b110f3adc007ab2782b21">DEBUG_EVENT</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>コールバックイベント </p>
+<table class="fieldtable">
+<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="gga8fbaa92b672b110f3adc007ab2782b21a997c55781b6169cba76db9f6decfdf40" name="gga8fbaa92b672b110f3adc007ab2782b21a997c55781b6169cba76db9f6decfdf40"></a>EVT_TARGET_CONNECT&#160;</td><td class="fielddoc"><p>ターゲット接続 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga8fbaa92b672b110f3adc007ab2782b21ae94a7f5e45c7eacb63f1a597d793f448" name="gga8fbaa92b672b110f3adc007ab2782b21ae94a7f5e45c7eacb63f1a597d793f448"></a>EVT_TARGET_DISCONNECT&#160;</td><td class="fielddoc"><p>ターゲット切断 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga8fbaa92b672b110f3adc007ab2782b21a22b26075cc87db9229a86cb0335e7e2b" name="gga8fbaa92b672b110f3adc007ab2782b21a22b26075cc87db9229a86cb0335e7e2b"></a>EVT_BREAK_POINT&#160;</td><td class="fielddoc"><p>ブレークポイント </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga8fbaa92b672b110f3adc007ab2782b21a3f80e4793a0f6e201475874c631ac8d2" name="gga8fbaa92b672b110f3adc007ab2782b21a3f80e4793a0f6e201475874c631ac8d2"></a>EVT_WATCH_POINT&#160;</td><td class="fielddoc"><p>ウオッチポイント </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="ga1d9128302618cb4dc1ad6712e7758b69" name="ga1d9128302618cb4dc1ad6712e7758b69"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1d9128302618cb4dc1ad6712e7758b69">&#9670;&#160;</a></span>WATCH_POINT_DIR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group__dbgctrl.html#ga1d9128302618cb4dc1ad6712e7758b69">WATCH_POINT_DIR</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ウオッチポイント方向 </p>
+<table class="fieldtable">
+<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="gga1d9128302618cb4dc1ad6712e7758b69a4471b2253588d06acc57c86b60e60fdc" name="gga1d9128302618cb4dc1ad6712e7758b69a4471b2253588d06acc57c86b60e60fdc"></a>WATCH_POINT_READ&#160;</td><td class="fielddoc"><p>リード方向 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga1d9128302618cb4dc1ad6712e7758b69aaba6c280ad5266d4c6e201a6a5420244" name="gga1d9128302618cb4dc1ad6712e7758b69aaba6c280ad5266d4c6e201a6a5420244"></a>WATCH_POINT_WRITE&#160;</td><td class="fielddoc"><p>ライト方向 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga1d9128302618cb4dc1ad6712e7758b69a0f804c4c61c207732029142814e96ac3" name="gga1d9128302618cb4dc1ad6712e7758b69a0f804c4c61c207732029142814e96ac3"></a>WATCH_POINT_RW&#160;</td><td class="fielddoc"><p>リードライト方向 </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="gacd0a4168bef2892463390ec7c40b3af3" name="gacd0a4168bef2892463390ec7c40b3af3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gacd0a4168bef2892463390ec7c40b3af3">&#9670;&#160;</a></span>WATCH_POINT_SIZE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group__dbgctrl.html#gacd0a4168bef2892463390ec7c40b3af3">WATCH_POINT_SIZE</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ウオッチポイントサイズ </p>
+<table class="fieldtable">
+<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="ggacd0a4168bef2892463390ec7c40b3af3a5ae5d9eeb327ba2da47bc44f8a3dd40d" name="ggacd0a4168bef2892463390ec7c40b3af3a5ae5d9eeb327ba2da47bc44f8a3dd40d"></a>WATCH_POINT_BYTE&#160;</td><td class="fielddoc"><p>1バイト </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggacd0a4168bef2892463390ec7c40b3af3a7ba86e6282ff5213449351d78c49006f" name="ggacd0a4168bef2892463390ec7c40b3af3a7ba86e6282ff5213449351d78c49006f"></a>WATCH_POINT_WORD&#160;</td><td class="fielddoc"><p>2バイト </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggacd0a4168bef2892463390ec7c40b3af3a3636f8fa37b3451dafd28c2978c212fb" name="ggacd0a4168bef2892463390ec7c40b3af3a3636f8fa37b3451dafd28c2978c212fb"></a>WATCH_POINT_DWORD&#160;</td><td class="fielddoc"><p>4バイト </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggacd0a4168bef2892463390ec7c40b3af3a3320dddb891c6a4848e9559caacc0586" name="ggacd0a4168bef2892463390ec7c40b3af3a3320dddb891c6a4848e9559caacc0586"></a>WATCH_POINT_QWORD&#160;</td><td class="fielddoc"><p>8バイト </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a id="gaa42226ed7e15aa6cfa663a87817fa923" name="gaa42226ed7e15aa6cfa663a87817fa923"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa42226ed7e15aa6cfa663a87817fa923">&#9670;&#160;</a></span>DcBreakPoint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool DcBreakPoint </td>
+          <td>(</td>
+          <td class="paramtype">u32&#160;</td>
+          <td class="paramname"><em>index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">u64&#160;</td>
+          <td class="paramname"><em>addr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ブレークポイントを設定する。 </p>
+<p>ブレークポイントがヒットするとコールバックする。</p>
+<p>ブレークポイントを無効にする場合はaddrに0を指定する。</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">index</td><td>ブレークポイントのインデックス番号、0から3 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">addr</td><td>アドレス</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">成功時はtrueを返す。失敗時はfalseを返す。</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga52501c4d5bb318adfc285633b841b4ce" name="ga52501c4d5bb318adfc285633b841b4ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga52501c4d5bb318adfc285633b841b4ce">&#9670;&#160;</a></span>DcCodeRead()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool DcCodeRead </td>
+          <td>(</td>
+          <td class="paramtype">u64&#160;</td>
+          <td class="paramname"><em>addr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">u32 *&#160;</td>
+          <td class="paramname"><em>data</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>プログラムコードを読み込む。 </p>
+<p>addrはベースアドレスからの相対アドレスで指定する。</p>
+<p>addrは4の倍数とすること。アクセスできる領域は.textセクションの範囲内。</p>
+<p><a class="el" href="group__dbgctrl.html#gafa1edd9b9c097efde9206c32db6c282c" title="メモリを読み込む。">DcMemRead()</a>より高速なAPI。</p>
+<p>dataはリトルエンディアンなので注意すること。</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">addr</td><td>アドレス </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">data</td><td>コード、1命令分</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">成功時はtrueを返す。失敗時はfalseを返す。</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga0f726bedd90319a856799f3625ff3534" name="ga0f726bedd90319a856799f3625ff3534"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga0f726bedd90319a856799f3625ff3534">&#9670;&#160;</a></span>DcCodeWrite()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool DcCodeWrite </td>
+          <td>(</td>
+          <td class="paramtype">u64&#160;</td>
+          <td class="paramname"><em>addr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">u32 *&#160;</td>
+          <td class="paramname"><em>data</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>プログラムコードを書き込む。 </p>
+<p>addrはベースアドレスからの相対アドレスで指定する。</p>
+<p>addrは4の倍数とすること。アクセスできる領域は.textセクションの範囲内。</p>
+<p><a class="el" href="group__dbgctrl.html#ga78db29a6dc87100711302838a6f94aeb" title="メモリに書き込む。">DcMemWrite()</a>より高速なAPI。</p>
+<p>dataはリトルエンディアンなので注意すること。</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">addr</td><td>アドレス </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">data</td><td>コード、1命令分</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">成功時はtrueを返す。失敗時はfalseを返す。</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga3ae569f087036d897f97340d5e040a3e" name="ga3ae569f087036d897f97340d5e040a3e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3ae569f087036d897f97340d5e040a3e">&#9670;&#160;</a></span>DcDebugContinue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool DcDebugContinue </td>
+          <td>(</td>
+          <td class="paramtype">u64&#160;</td>
+          <td class="paramname"><em>thread_id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>実行を再開する。 </p>
+<p>イベントコールバックでDEBUG_CB_STOPを返した後に、アプリケーションの実行を再開する時に呼ぶ。</p>
+<p>それ以外の状態でAPIを呼んだ場合の動作は不定。</p>
+<p>イベントコールバック内では利用できない。 <br  />
+</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">thread_id</td><td>スレッドID</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">成功時はtrueを返す。失敗時はfalseを返す。</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga34fed525888d84485fa56ff8a8e2a11b" name="ga34fed525888d84485fa56ff8a8e2a11b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga34fed525888d84485fa56ff8a8e2a11b">&#9670;&#160;</a></span>DcDeinit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DcDeinit </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ライブラリ終了時にモジュールを開放する。 </p>
+<p>userAppExit()で必ず呼ぶこと。</p>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">無し　</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga7115d9d4178a0984fca4d02e6661846a" name="ga7115d9d4178a0984fca4d02e6661846a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga7115d9d4178a0984fca4d02e6661846a">&#9670;&#160;</a></span>DcGetBaseAddress()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool DcGetBaseAddress </td>
+          <td>(</td>
+          <td class="paramtype">u64 *&#160;</td>
+          <td class="paramname"><em>addr</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ベースアドレスを取得する。 </p>
+<p>API成功時にaddrにアプリケーションのベースアドレスが入る。</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">addr</td><td>ベースアドレス</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">成功時はtrueを返す。失敗時はfalseを返す。</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga66e67da56b54d00b77ec51c2b8cc7553" name="ga66e67da56b54d00b77ec51c2b8cc7553"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga66e67da56b54d00b77ec51c2b8cc7553">&#9670;&#160;</a></span>DcGetCodeAreaSize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool DcGetCodeAreaSize </td>
+          <td>(</td>
+          <td class="paramtype">u64 *&#160;</td>
+          <td class="paramname"><em>size</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>アプリケーションの.textセクションのサイズを取得する。 </p>
+<p>.textセクションはプログラムコードが格納されているセクション。</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">size</td><td>.textセクションサイズ</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">成功時はtrueを返す。失敗時はfalseを返す。</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga7e595532a14722234df90386a00f2f8e" name="ga7e595532a14722234df90386a00f2f8e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga7e595532a14722234df90386a00f2f8e">&#9670;&#160;</a></span>DcGetHandle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool DcGetHandle </td>
+          <td>(</td>
+          <td class="paramtype">Handle *&#160;</td>
+          <td class="paramname"><em>handle</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>デバッグハンドルを取得する。 </p>
+<p>API成功時にhandleにアプリケーションのデバッグハンドルが入る。</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">handle</td><td>デバッグハンドル</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">成功時はtrueを返す。失敗時はfalseを返す。</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="gad62cb14373b24f103e09cd8ccaa48b25" name="gad62cb14373b24f103e09cd8ccaa48b25"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad62cb14373b24f103e09cd8ccaa48b25">&#9670;&#160;</a></span>DcGetPid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool DcGetPid </td>
+          <td>(</td>
+          <td class="paramtype">u64 *&#160;</td>
+          <td class="paramname"><em>pid</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>プロセスIDを取得する。 </p>
+<p>API成功時にpidにアプリケーションのプロセスIDが入る。</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">pid</td><td>プロセスID</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">成功時はtrueを返す。失敗時はfalseを返す。</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga72768d12be39c40add8aad06352ec0e6" name="ga72768d12be39c40add8aad06352ec0e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga72768d12be39c40add8aad06352ec0e6">&#9670;&#160;</a></span>DcGetProcessHandle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool DcGetProcessHandle </td>
+          <td>(</td>
+          <td class="paramtype">Handle *&#160;</td>
+          <td class="paramname"><em>handle</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>プロセスハンドルを取得する。 </p>
+<p>API成功時にhandleにアプリケーションのプロセスハンドルが入る。</p>
+<p>プロセスハンドルとデバッグハンドルは異なる。</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">handle</td><td>プロセスハンドル</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">成功時はtrueを返す。失敗時はfalseを返す。</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga4188b18aa78da84f92d80dc2bbf51383" name="ga4188b18aa78da84f92d80dc2bbf51383"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4188b18aa78da84f92d80dc2bbf51383">&#9670;&#160;</a></span>DcGetVersion()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int DcGetVersion </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ライブラリバージョンを取得する。 </p>
+<p>BCD形式の値を返す。0x0100ならば1.00を示す。</p>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">ライブラリバージョン</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="gac7f2f3909b9dd640c40b692cb1077646" name="gac7f2f3909b9dd640c40b692cb1077646"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac7f2f3909b9dd640c40b692cb1077646">&#9670;&#160;</a></span>DcInit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DcInit </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ライブラリの動作に必要なモジュールを初期化する。 </p>
+<p>初期化するモジュールはpminfoInitialize()、pmdmntInitialize()</p>
+<p>初期化に失敗した場合は、エラースクリーンが表示される。</p>
+<p>userAppInit()内で必ず呼ぶこと。 </p>
+
+</div>
+</div>
+<a id="gac0da8da2ab96df980f0d8ee6a024e328" name="gac0da8da2ab96df980f0d8ee6a024e328"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac0da8da2ab96df980f0d8ee6a024e328">&#9670;&#160;</a></span>DcIsProcessing()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool DcIsProcessing </td>
+          <td>(</td>
+          <td class="paramtype">u64&#160;</td>
+          <td class="paramname"><em>timeout</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>動作状況を取得する。 </p>
+<p>ライブラリが動作している間はtrueを返す。</p>
+<p>timeoutに有効な値を設定した場合、その時間を待って処理を返す。</p>
+<p>timeoutに0を指定するとAPIはすぐに処理を返す。 <br  />
+</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">timeout</td><td>タイムアウト、マイクロ秒単位</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">動作時はtrueを返す。未動作時はfalseを返す。</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga42ade5ab84122e8a90685605f7648c60" name="ga42ade5ab84122e8a90685605f7648c60"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga42ade5ab84122e8a90685605f7648c60">&#9670;&#160;</a></span>DcLogPrint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool DcLogPrint </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>fmt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ログを出力する。 </p>
+<p>1回の最大文字数は128文字。printfと同じ使い方が可能。</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">fmt</td><td>ログに出力する文字列</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">成功時はtrueを返す。失敗時はfalseを返す。</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="gaba1f48209d6295a683bd4893c69bc57b" name="gaba1f48209d6295a683bd4893c69bc57b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaba1f48209d6295a683bd4893c69bc57b">&#9670;&#160;</a></span>DcLogStart()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool DcLogStart </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ログ取得を開始する。 </p>
+<p>nameにはログファイル名（パスを含む）を指定する。</p>
+<p>ファイルは自動で作成する。すでにファイルがある場合はログを追記する。</p>
+<p>フォルダは予め作成しておく必要がある。</p>
+<p><a class="el" href="group__dbgctrl.html#gaba1f48209d6295a683bd4893c69bc57b" title="ログ取得を開始する。">DcLogStart()</a>、DcLogStop()、DcLogPrint()はデバッグ無効時にも利用可能。</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>ファイル名</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">成功時はtrueを返す。失敗時はfalseを返す。</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="gac3905adf8f77b65991caa79e00816ced" name="gac3905adf8f77b65991caa79e00816ced"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac3905adf8f77b65991caa79e00816ced">&#9670;&#160;</a></span>DcLogStop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DcLogStop </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ログ取得を停止する。 </p>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">無し</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="gafa1edd9b9c097efde9206c32db6c282c" name="gafa1edd9b9c097efde9206c32db6c282c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gafa1edd9b9c097efde9206c32db6c282c">&#9670;&#160;</a></span>DcMemRead()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool DcMemRead </td>
+          <td>(</td>
+          <td class="paramtype">u64&#160;</td>
+          <td class="paramname"><em>addr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">u64&#160;</td>
+          <td class="paramname"><em>len</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>メモリを読み込む。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">addr</td><td>アドレス </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">data</td><td>読み込みデータを格納するポインタ </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">len</td><td>読み込みサイズ</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">成功時はtrueを返す。失敗時はfalseを返す。</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga78db29a6dc87100711302838a6f94aeb" name="ga78db29a6dc87100711302838a6f94aeb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga78db29a6dc87100711302838a6f94aeb">&#9670;&#160;</a></span>DcMemWrite()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool DcMemWrite </td>
+          <td>(</td>
+          <td class="paramtype">u64&#160;</td>
+          <td class="paramname"><em>addr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">u64&#160;</td>
+          <td class="paramname"><em>len</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>メモリに書き込む。 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">addr</td><td>アドレス </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">data</td><td>書き込みデータのポインタ </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">len</td><td>書き込みサイズ</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">成功時はtrueを返す。失敗時はfalseを返す。</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga5c6a5e25ed45f46443e838376a118384" name="ga5c6a5e25ed45f46443e838376a118384"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5c6a5e25ed45f46443e838376a118384">&#9670;&#160;</a></span>DcTargetConnect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool DcTargetConnect </td>
+          <td>(</td>
+          <td class="paramtype">u64&#160;</td>
+          <td class="paramname"><em>tid</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">s32&#160;</td>
+          <td class="paramname"><em>priority</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__dbgctrl.html#ga4681d0eb1876b1dfadbfd7c1babf1954">DEBUG_EVENT_CALLBACK</a>&#160;</td>
+          <td class="paramname"><em>callback</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>arg</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>アプリケーションに接続する。 </p>
+<p>priorityに指定できる値は40から58。</p>
+<p>44が基本スレッドのプライオリティ、58が最高プライオリティ。</p>
+<p>argは任意の値を設定可能。使用しない場合はNULLを指定する。</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">tid</td><td>タイトルID </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">priority</td><td>40から58を指定 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">callback</td><td>コールバックハンドラ </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">arg</td><td>引数、オプション</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">成功時はtrueを返す。失敗時はfalseを返す。</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="gaae7f8e15a638c4fdc638a28fdd7c3501" name="gaae7f8e15a638c4fdc638a28fdd7c3501"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaae7f8e15a638c4fdc638a28fdd7c3501">&#9670;&#160;</a></span>DcTargetDisconnect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DcTargetDisconnect </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>アプリケーションから切断する。 </p>
+<p>ブレークポイント、ウオッチポイントは無効になる。 　</p>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">無し</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="gadd2cb961bdc5acf7073397cb9b5fc249" name="gadd2cb961bdc5acf7073397cb9b5fc249"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gadd2cb961bdc5acf7073397cb9b5fc249">&#9670;&#160;</a></span>DcWatchPoint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool DcWatchPoint </td>
+          <td>(</td>
+          <td class="paramtype">u32&#160;</td>
+          <td class="paramname"><em>index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">u64&#160;</td>
+          <td class="paramname"><em>addr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__dbgctrl.html#ga1d9128302618cb4dc1ad6712e7758b69">WATCH_POINT_DIR</a>&#160;</td>
+          <td class="paramname"><em>dir</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__dbgctrl.html#gacd0a4168bef2892463390ec7c40b3af3">WATCH_POINT_SIZE</a>&#160;</td>
+          <td class="paramname"><em>size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ウオッチポイントを設定する。 </p>
+<p>ウオッチポイントがヒットするとコールバックする。</p>
+<p>ウオッチポイントを無効にする場合はaddrに0を指定する。</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">index</td><td>ウオッチポイントのインデックス番号、0から3 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">addr</td><td>アドレス</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">成功時はtrueを返す。失敗時はfalseを返す。</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>
