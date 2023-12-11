@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['dbgctrl_0',['Dbgctrl',['../group__dbgctrl.html',1,'']]],
+  ['dbgctrl_0',['dbgctrl',['../group__dbgctrl.html',1,'Dbgctrl'],['../index.html',1,'dbgctrl']]],
   ['dbgctrl_2eh_1',['dbgctrl.h',['../dbgctrl_8h.html',1,'']]],
   ['dcbreakpoint_2',['DcBreakPoint',['../group__dbgctrl.html#gaa42226ed7e15aa6cfa663a87817fa923',1,'dbgctrl.h']]],
   ['dccoderead_3',['DcCodeRead',['../group__dbgctrl.html#ga52501c4d5bb318adfc285633b841b4ce',1,'dbgctrl.h']]],
@@ -23,10 +23,10 @@ var searchData=
   ['dctargetconnect_20',['DcTargetConnect',['../group__dbgctrl.html#ga5c6a5e25ed45f46443e838376a118384',1,'dbgctrl.h']]],
   ['dctargetdisconnect_21',['DcTargetDisconnect',['../group__dbgctrl.html#gaae7f8e15a638c4fdc638a28fdd7c3501',1,'dbgctrl.h']]],
   ['dcwatchpoint_22',['DcWatchPoint',['../group__dbgctrl.html#gadd2cb961bdc5acf7073397cb9b5fc249',1,'dbgctrl.h']]],
-  ['debug_5fcb_5fcontinue_23',['DEBUG_CB_CONTINUE',['../group__dbgctrl.html#gga2086563d25e6183a2c5c42033c2f8e6ea9acb2929b331d63e667a4f38001add33',1,'dbgctrl.h']]],
-  ['debug_5fcb_5ferror_24',['DEBUG_CB_ERROR',['../group__dbgctrl.html#gga2086563d25e6183a2c5c42033c2f8e6ea59a389efb7f93e9e3d256953a15f63dc',1,'dbgctrl.h']]],
-  ['debug_5fcb_5fstop_25',['DEBUG_CB_STOP',['../group__dbgctrl.html#gga2086563d25e6183a2c5c42033c2f8e6ea6c367604a53e4411656f8e1fb1847964',1,'dbgctrl.h']]],
-  ['debug_5fcb_5ftype_26',['DEBUG_CB_TYPE',['../group__dbgctrl.html#ga2086563d25e6183a2c5c42033c2f8e6e',1,'dbgctrl.h']]],
+  ['debug_5fcb_5fcontinue_23',['DEBUG_CB_CONTINUE',['../group__dbgctrl.html#gga98ac9bc714ccd4fced91fb25d1adb96ca9acb2929b331d63e667a4f38001add33',1,'dbgctrl.h']]],
+  ['debug_5fcb_5ferror_24',['DEBUG_CB_ERROR',['../group__dbgctrl.html#gga98ac9bc714ccd4fced91fb25d1adb96ca59a389efb7f93e9e3d256953a15f63dc',1,'dbgctrl.h']]],
+  ['debug_5fcb_5fstatus_25',['DEBUG_CB_STATUS',['../group__dbgctrl.html#ga98ac9bc714ccd4fced91fb25d1adb96c',1,'dbgctrl.h']]],
+  ['debug_5fcb_5fstop_26',['DEBUG_CB_STOP',['../group__dbgctrl.html#gga98ac9bc714ccd4fced91fb25d1adb96ca6c367604a53e4411656f8e1fb1847964',1,'dbgctrl.h']]],
   ['debug_5fevent_27',['DEBUG_EVENT',['../group__dbgctrl.html#ga8fbaa92b672b110f3adc007ab2782b21',1,'dbgctrl.h']]],
-  ['debug_5fevent_5fcallback_28',['DEBUG_EVENT_CALLBACK',['../group__dbgctrl.html#ga4681d0eb1876b1dfadbfd7c1babf1954',1,'dbgctrl.h']]]
+  ['debug_5fevent_5fcallback_28',['DEBUG_EVENT_CALLBACK',['../group__dbgctrl.html#ga4a7ee0f5910c89742a51c3a60e3b3808',1,'dbgctrl.h']]]
 ];

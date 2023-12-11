@@ -6,7 +6,8 @@ var indexSectionsWithContent =
   3: "d",
   4: "dw",
   5: "dew",
-  6: "d"
+  6: "d",
+  7: "d"
 };
 
 var indexSectionNames =
@@ -17,7 +18,8 @@ var indexSectionNames =
   3: "typedefs",
   4: "enums",
   5: "enumvalues",
-  6: "groups"
+  6: "groups",
+  7: "pages"
 };
 
 var indexSectionLabels =
@@ -28,6 +30,7 @@ var indexSectionLabels =
   3: "型定義",
   4: "列挙型",
   5: "列挙値",
-  6: "グループ"
+  6: "グループ",
+  7: "ページ"
 };
 
