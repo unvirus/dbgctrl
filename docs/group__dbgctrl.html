@@ -198,6 +198,7 @@ $(function() {
 <p>evtの値がEVT_BREAK_POINT、 EVT_WATCH_POINTの時、DEBUG_CB_CONTINUEを返すと処理を続行する。</p>
 <p>DEBUG_CB_STOPを返すと処理は中断したままになる。</p>
 <p>このとき後で、DcDebugContinue()を呼ぶことで処理を再開する。</p>
+<p>DEBUG_CB_ERRORを返すとデバッグ処理は中断し、DcIsProcessing()はfalseを返す。</p>
 <p>argはDcTargetConnect()で指定した引数が入る。</p>
 <p>呼び出し元のスレッドのスタックサイズは16KB。</p>
 <dl class="params"><dt>引数</dt><dd>
