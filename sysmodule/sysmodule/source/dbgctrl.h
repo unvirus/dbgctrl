@@ -195,7 +195,7 @@ bool DcLogPrint(const char *fmt, ...);
     argは任意の値を設定可能。使用しない場合はNULLを指定する。 
  
  @param [in]		tid タイトルID
- @param [in]		priority 424から59を指定
+ @param [in]		priority 24から59を指定
  @param [in]		callback コールバックハンドラ
  @param [in]		arg 引数、オプション
  
