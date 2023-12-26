@@ -1,11 +1,15 @@
-## dbgctrl  
-Nintendo Switch Debugger Library.  
+## dbgctrl 
+Nintendo Switch Debugger Library(libdbgctrl.a).
+
+## Change log  
+2023/12/26  
+Fixed an issue where Watch Point 3 was unusable.  
 
 ## API specifications  
 [Here](https://unvirus.github.io/dbgctrl/index.html)  
 
 ## Sample Source Code  
-Template is [here](https://github.com/unvirus/dbgctrl/tree/main/sysmodule). (including libdbgctrl.a)    
+Template is [here](https://github.com/unvirus/dbgctrl/tree/main/sysmodule). (including dbgctrl Library)    
 The original source code is [here](https://github.com/switchbrew/switch-examples/tree/master/templates/sysmodule).  
 
 ## Configure
