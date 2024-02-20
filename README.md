@@ -1,5 +1,6 @@
 ## dbgctrl 
-Nintendo Switch Debugger Library(libdbgctrl.a).
+Nintendo Switch Debugger Library(libdbgctrl.a).  
+This is a library for creating a simple tiny debugger.  
 
 ## Change log  
 2024/02/20  
