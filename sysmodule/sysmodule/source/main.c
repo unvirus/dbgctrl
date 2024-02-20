@@ -87,7 +87,7 @@ static DEBUG_CB_STATUS DebugCallback(DEBUG_EVENT evt, u64 thread_id, u64 addr, v
         DcLogPrint("EVT_DATA_ABORT\n");
         break;
     case EVT_ALIGNMENT_FAULT:
-        DcLogPrint("EVT_DATA_ABORT\n");
+        DcLogPrint("EVT_ALIGNMENT_FAULT\n");
         break;
     case EVT_PAUSE:
         DcLogPrint("EVT_PAUSE\n");
