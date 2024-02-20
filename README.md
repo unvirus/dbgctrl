@@ -2,8 +2,8 @@
 Nintendo Switch Debugger Library(libdbgctrl.a).
 
 ## Change log  
-2023/12/26  
-Fixed an issue where Watch Point 3 was unusable.  
+2024/02/20  
+Supported software breakpoints.  
 
 ## API specifications  
 [Here](https://unvirus.github.io/dbgctrl/index.html)  
