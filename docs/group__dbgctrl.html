@@ -85,10 +85,20 @@ $(function() {
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
 列挙型</h2></td></tr>
-<tr class="memitem:ga8fbaa92b672b110f3adc007ab2782b21" id="r_ga8fbaa92b672b110f3adc007ab2782b21"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dbgctrl.html#ga8fbaa92b672b110f3adc007ab2782b21">DEBUG_EVENT</a> { <a class="el" href="group__dbgctrl.html#gga8fbaa92b672b110f3adc007ab2782b21a997c55781b6169cba76db9f6decfdf40">EVT_TARGET_CONNECT</a> = 0
+<tr class="memitem:ga8fbaa92b672b110f3adc007ab2782b21" id="r_ga8fbaa92b672b110f3adc007ab2782b21"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dbgctrl.html#ga8fbaa92b672b110f3adc007ab2782b21">DEBUG_EVENT</a> { <br />
+&#160;&#160;<a class="el" href="group__dbgctrl.html#gga8fbaa92b672b110f3adc007ab2782b21a997c55781b6169cba76db9f6decfdf40">EVT_TARGET_CONNECT</a> = 0
 , <a class="el" href="group__dbgctrl.html#gga8fbaa92b672b110f3adc007ab2782b21ae94a7f5e45c7eacb63f1a597d793f448">EVT_TARGET_DISCONNECT</a>
 , <a class="el" href="group__dbgctrl.html#gga8fbaa92b672b110f3adc007ab2782b21a22b26075cc87db9229a86cb0335e7e2b">EVT_BREAK_POINT</a>
 , <a class="el" href="group__dbgctrl.html#gga8fbaa92b672b110f3adc007ab2782b21a3f80e4793a0f6e201475874c631ac8d2">EVT_WATCH_POINT</a>
+, <br />
+&#160;&#160;<a class="el" href="group__dbgctrl.html#gga8fbaa92b672b110f3adc007ab2782b21ae247528d8fb4f73ef4c0b2372ce23330">EVT_SW_BREAK_POINT</a>
+, <a class="el" href="group__dbgctrl.html#gga8fbaa92b672b110f3adc007ab2782b21a6c299b8db1b6274576ab3d8dae488777">EVT_TRAP</a>
+, <a class="el" href="group__dbgctrl.html#gga8fbaa92b672b110f3adc007ab2782b21a8635bad0c010a61e2f50ee5d0b1f2d92">EVT_PREFETCH_ABORT</a>
+, <a class="el" href="group__dbgctrl.html#gga8fbaa92b672b110f3adc007ab2782b21ad6c829390f4e7f048bd676dddcd70c06">EVT_DATA_ABORT</a>
+, <br />
+&#160;&#160;<a class="el" href="group__dbgctrl.html#gga8fbaa92b672b110f3adc007ab2782b21aad2bc5adb298026745d1f9c8937bf06a">EVT_ALIGNMENT_FAULT</a>
+, <a class="el" href="group__dbgctrl.html#gga8fbaa92b672b110f3adc007ab2782b21acd45382e94420dc81605bbb10f1463c8">EVT_PAUSE</a>
+<br />
  }</td></tr>
 <tr class="memdesc:ga8fbaa92b672b110f3adc007ab2782b21"><td class="mdescLeft">&#160;</td><td class="mdescRight">コールバックイベント  <a href="group__dbgctrl.html#ga8fbaa92b672b110f3adc007ab2782b21">[詳解]</a><br /></td></tr>
 <tr class="separator:ga8fbaa92b672b110f3adc007ab2782b21"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -141,6 +151,9 @@ $(function() {
 <tr class="memitem:ga3ae569f087036d897f97340d5e040a3e" id="r_ga3ae569f087036d897f97340d5e040a3e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dbgctrl.html#ga3ae569f087036d897f97340d5e040a3e">DcDebugContinue</a> (u64 thread_id)</td></tr>
 <tr class="memdesc:ga3ae569f087036d897f97340d5e040a3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">実行を再開する。  <br /></td></tr>
 <tr class="separator:ga3ae569f087036d897f97340d5e040a3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga512e76e63d207dcebf4781563b05fb30" id="r_ga512e76e63d207dcebf4781563b05fb30"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dbgctrl.html#ga512e76e63d207dcebf4781563b05fb30">DcDebugPause</a> (void)</td></tr>
+<tr class="memdesc:ga512e76e63d207dcebf4781563b05fb30"><td class="mdescLeft">&#160;</td><td class="mdescRight">アプリケーションを一時停止する。  <br /></td></tr>
+<tr class="separator:ga512e76e63d207dcebf4781563b05fb30"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gafa1edd9b9c097efde9206c32db6c282c" id="r_gafa1edd9b9c097efde9206c32db6c282c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dbgctrl.html#gafa1edd9b9c097efde9206c32db6c282c">DcMemRead</a> (u64 addr, void *data, u64 len)</td></tr>
 <tr class="memdesc:gafa1edd9b9c097efde9206c32db6c282c"><td class="mdescLeft">&#160;</td><td class="mdescRight">メモリを読み込む。  <br /></td></tr>
 <tr class="separator:gafa1edd9b9c097efde9206c32db6c282c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -166,8 +179,11 @@ $(function() {
 <tr class="memdesc:ga4188b18aa78da84f92d80dc2bbf51383"><td class="mdescLeft">&#160;</td><td class="mdescRight">ライブラリバージョンを取得する。  <br /></td></tr>
 <tr class="separator:ga4188b18aa78da84f92d80dc2bbf51383"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaa42226ed7e15aa6cfa663a87817fa923" id="r_gaa42226ed7e15aa6cfa663a87817fa923"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dbgctrl.html#gaa42226ed7e15aa6cfa663a87817fa923">DcBreakPoint</a> (u32 index, u64 addr)</td></tr>
-<tr class="memdesc:gaa42226ed7e15aa6cfa663a87817fa923"><td class="mdescLeft">&#160;</td><td class="mdescRight">ブレークポイントを設定する。  <br /></td></tr>
+<tr class="memdesc:gaa42226ed7e15aa6cfa663a87817fa923"><td class="mdescLeft">&#160;</td><td class="mdescRight">ハードウエアブレークポイントを設定する。  <br /></td></tr>
 <tr class="separator:gaa42226ed7e15aa6cfa663a87817fa923"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5a5a5bee33d188f637a1626f9327a43f" id="r_ga5a5a5bee33d188f637a1626f9327a43f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dbgctrl.html#ga5a5a5bee33d188f637a1626f9327a43f">DcSwBreakPoint</a> (u32 index, u64 addr)</td></tr>
+<tr class="memdesc:ga5a5a5bee33d188f637a1626f9327a43f"><td class="mdescLeft">&#160;</td><td class="mdescRight">ソフトウエアブレークポイントを設定する。  <br /></td></tr>
+<tr class="separator:ga5a5a5bee33d188f637a1626f9327a43f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gadd2cb961bdc5acf7073397cb9b5fc249" id="r_gadd2cb961bdc5acf7073397cb9b5fc249"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dbgctrl.html#gadd2cb961bdc5acf7073397cb9b5fc249">DcWatchPoint</a> (u32 index, u64 addr, <a class="el" href="group__dbgctrl.html#ga1d9128302618cb4dc1ad6712e7758b69">WATCH_POINT_DIR</a> dir, <a class="el" href="group__dbgctrl.html#gacd0a4168bef2892463390ec7c40b3af3">WATCH_POINT_SIZE</a> size)</td></tr>
 <tr class="memdesc:gadd2cb961bdc5acf7073397cb9b5fc249"><td class="mdescLeft">&#160;</td><td class="mdescRight">ウオッチポイントを設定する。  <br /></td></tr>
 <tr class="separator:gadd2cb961bdc5acf7073397cb9b5fc249"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -177,6 +193,9 @@ $(function() {
 <tr class="memitem:ga0f726bedd90319a856799f3625ff3534" id="r_ga0f726bedd90319a856799f3625ff3534"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dbgctrl.html#ga0f726bedd90319a856799f3625ff3534">DcCodeWrite</a> (u64 addr, u32 *data)</td></tr>
 <tr class="memdesc:ga0f726bedd90319a856799f3625ff3534"><td class="mdescLeft">&#160;</td><td class="mdescRight">プログラムコードを書き込む。  <br /></td></tr>
 <tr class="separator:ga0f726bedd90319a856799f3625ff3534"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga30241f734341179dd5fa98ff39400464" id="r_ga30241f734341179dd5fa98ff39400464"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dbgctrl.html#ga30241f734341179dd5fa98ff39400464">DcWaitForTarget</a> (u64 tid, u64 timeout)</td></tr>
+<tr class="memdesc:ga30241f734341179dd5fa98ff39400464"><td class="mdescLeft">&#160;</td><td class="mdescRight">アプリケーションの起動を待つ。  <br /></td></tr>
+<tr class="separator:ga30241f734341179dd5fa98ff39400464"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
 <h2 class="groupheader">型定義詳解</h2>
@@ -193,9 +212,12 @@ $(function() {
 </div><div class="memdoc">
 
 <p>イベントコールバック。 </p>
-<p>evtの値がEVT_BREAK_POINT、 EVT_WATCH_POINTの時はthread_id、addrに有効な値が入る。</p>
-<p>それ以外の時はthread_id、addrは不定。</p>
-<p>evtの値がEVT_BREAK_POINT、 EVT_WATCH_POINTの時、DEBUG_CB_CONTINUEを返すと処理を続行する。</p>
+<p>evtの値がEVT_BREAK_POINT、 EVT_WATCH_POINT、EVT_SW_BREAK_POINT</p>
+<p>EVT_TRAP、EVT_PREFETCH_ABORT、EVT_ALIGNMENT_FAULT、EVT_PAUSEの時はthread_id、addrに有効な値が入る。</p>
+<p>EVT_TARGET_CONNECT、EVT_TARGET_DISCONNECTの時はthread_id、addrは未使用で0になる。</p>
+<p>evtの値がEVT_BREAK_POINT、 EVT_WATCH_POINT、EVT_SW_BREAK_POINTの時、DEBUG_CB_CONTINUEを返すと処理を続行する。</p>
+<p>ただし、ブレークポイント、ウオッチポイントを設定したまま、DEBUG_CB_CONTINUEを返しても</p>
+<p>すぐに同じアドレスで再びコールバックが発生する。</p>
 <p>DEBUG_CB_STOPを返すと処理は中断したままになる。</p>
 <p>このとき後で、DcDebugContinue()を呼ぶことで処理を再開する。</p>
 <p>DEBUG_CB_ERRORを返すとデバッグ処理は中断し、DcIsProcessing()はfalseを返す。</p>
@@ -266,6 +288,18 @@ $(function() {
 <tr><td class="fieldname"><a id="gga8fbaa92b672b110f3adc007ab2782b21a22b26075cc87db9229a86cb0335e7e2b" name="gga8fbaa92b672b110f3adc007ab2782b21a22b26075cc87db9229a86cb0335e7e2b"></a>EVT_BREAK_POINT&#160;</td><td class="fielddoc"><p>ブレークポイント </p>
 </td></tr>
 <tr><td class="fieldname"><a id="gga8fbaa92b672b110f3adc007ab2782b21a3f80e4793a0f6e201475874c631ac8d2" name="gga8fbaa92b672b110f3adc007ab2782b21a3f80e4793a0f6e201475874c631ac8d2"></a>EVT_WATCH_POINT&#160;</td><td class="fielddoc"><p>ウオッチポイント </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga8fbaa92b672b110f3adc007ab2782b21ae247528d8fb4f73ef4c0b2372ce23330" name="gga8fbaa92b672b110f3adc007ab2782b21ae247528d8fb4f73ef4c0b2372ce23330"></a>EVT_SW_BREAK_POINT&#160;</td><td class="fielddoc"><p>ソフトウエアブレークポイント </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga8fbaa92b672b110f3adc007ab2782b21a6c299b8db1b6274576ab3d8dae488777" name="gga8fbaa92b672b110f3adc007ab2782b21a6c299b8db1b6274576ab3d8dae488777"></a>EVT_TRAP&#160;</td><td class="fielddoc"><p>トラップ </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga8fbaa92b672b110f3adc007ab2782b21a8635bad0c010a61e2f50ee5d0b1f2d92" name="gga8fbaa92b672b110f3adc007ab2782b21a8635bad0c010a61e2f50ee5d0b1f2d92"></a>EVT_PREFETCH_ABORT&#160;</td><td class="fielddoc"><p>プリフェッチアボート </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga8fbaa92b672b110f3adc007ab2782b21ad6c829390f4e7f048bd676dddcd70c06" name="gga8fbaa92b672b110f3adc007ab2782b21ad6c829390f4e7f048bd676dddcd70c06"></a>EVT_DATA_ABORT&#160;</td><td class="fielddoc"><p>データアボート </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga8fbaa92b672b110f3adc007ab2782b21aad2bc5adb298026745d1f9c8937bf06a" name="gga8fbaa92b672b110f3adc007ab2782b21aad2bc5adb298026745d1f9c8937bf06a"></a>EVT_ALIGNMENT_FAULT&#160;</td><td class="fielddoc"><p>アラインメントフォルト　 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga8fbaa92b672b110f3adc007ab2782b21acd45382e94420dc81605bbb10f1463c8" name="gga8fbaa92b672b110f3adc007ab2782b21acd45382e94420dc81605bbb10f1463c8"></a>EVT_PAUSE&#160;</td><td class="fielddoc"><p>一時停止 </p>
 </td></tr>
 </table>
 
@@ -348,9 +382,9 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p>ブレークポイントを設定する。 </p>
-<p>ブレークポイントがヒットするとコールバックする。</p>
-<p>ブレークポイントを無効にする場合はaddrに0を指定する。</p>
+<p>ハードウエアブレークポイントを設定する。 </p>
+<p>ハードウエアブレークポイントがヒットするとコールバックする。</p>
+<p>ハードウエアブレークポイントを無効にする場合はaddrに0を指定する。</p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">index</td><td>ブレークポイントのインデックス番号、0から3 </td></tr>
@@ -395,7 +429,8 @@ $(function() {
 
 <p>プログラムコードを読み込む。 </p>
 <p>addrはベースアドレスからの相対アドレスで指定する。</p>
-<p>addrは4の倍数とすること。アクセスできる領域は.textセクションの範囲内。</p>
+<p>addrは4の倍数とすること。アクセスできる領域はアプリケーションの.textセクションの範囲内。</p>
+<p>subsdkのプログラムコードを読み込む場合は、DcMemRead()を使用すること。</p>
 <p><a class="el" href="group__dbgctrl.html#gafa1edd9b9c097efde9206c32db6c282c" title="メモリを読み込む。">DcMemRead()</a>より高速なAPI。</p>
 <p>dataはリトルエンディアンなので注意すること。</p>
 <dl class="params"><dt>引数</dt><dd>
@@ -442,7 +477,8 @@ $(function() {
 
 <p>プログラムコードを書き込む。 </p>
 <p>addrはベースアドレスからの相対アドレスで指定する。</p>
-<p>addrは4の倍数とすること。アクセスできる領域は.textセクションの範囲内。</p>
+<p>addrは4の倍数とすること。アクセスできる領域はアプリケーションの.textセクションの範囲内。</p>
+<p>subsdkにプログラムコードを書き込む場合は、DcMemWrite()を使用すること。</p>
 <p><a class="el" href="group__dbgctrl.html#ga78db29a6dc87100711302838a6f94aeb" title="メモリに書き込む。">DcMemWrite()</a>より高速なAPI。</p>
 <p>dataはリトルエンディアンなので注意すること。</p>
 <dl class="params"><dt>引数</dt><dd>
@@ -478,7 +514,8 @@ $(function() {
 </div><div class="memdoc">
 
 <p>実行を再開する。 </p>
-<p>イベントコールバックでDEBUG_CB_STOPを返した後に、アプリケーションの実行を再開する時に呼ぶ。</p>
+<p>イベントコールバックでDEBUG_CB_STOPを返した時、DcDebugPause()を行った時に</p>
+<p>アプリケーションの実行を再開する時に呼ぶ。</p>
 <p>それ以外の状態でAPIを呼んだ場合の動作は不定。</p>
 <p>イベントコールバック内では利用できない。 <br  />
 </p>
@@ -488,6 +525,37 @@ $(function() {
   </table>
   </dd>
 </dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">成功時はtrueを返す。失敗時はfalseを返す。</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga512e76e63d207dcebf4781563b05fb30" name="ga512e76e63d207dcebf4781563b05fb30"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga512e76e63d207dcebf4781563b05fb30">&#9670;&#160;</a></span>DcDebugPause()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool DcDebugPause </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>アプリケーションを一時停止する。 </p>
+<p>APIを呼んだ直後は、まだアプリケーションは動作している。</p>
+<p>アプリケーションが一時停止すると、イベントコールバックでEVT_PAUSEが発生する。</p>
+<p>動作を再開するには、DcDebugContinue()を呼ぶ。</p>
+<p>イベントコールバック内では利用できない。 <br  />
+</p>
 <dl class="retval"><dt>戻り値</dt><dd>
   <table class="retval">
     <tr><td class="paramname">成功時はtrueを返す。失敗時はfalseを返す。</td><td></td></tr>
@@ -839,7 +907,7 @@ $(function() {
 <p>ログ取得を開始する。 </p>
 <p>nameにはログファイル名（パスを含む）を指定する。</p>
 <p>ファイルは自動で作成する。すでにファイルがある場合はログを追記する。</p>
-<p>フォルダは予め作成しておく必要がある。</p>
+<p>フォルダは前もって作成しておく必要がある。</p>
 <p><a class="el" href="group__dbgctrl.html#gaba1f48209d6295a683bd4893c69bc57b" title="ログ取得を開始する。">DcLogStart()</a>、DcLogStop()、DcLogPrint()はデバッグ無効時にも利用可能。</p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
@@ -982,6 +1050,53 @@ $(function() {
 
 </div>
 </div>
+<a id="ga5a5a5bee33d188f637a1626f9327a43f" name="ga5a5a5bee33d188f637a1626f9327a43f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5a5a5bee33d188f637a1626f9327a43f">&#9670;&#160;</a></span>DcSwBreakPoint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool DcSwBreakPoint </td>
+          <td>(</td>
+          <td class="paramtype">u32&#160;</td>
+          <td class="paramname"><em>index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">u64&#160;</td>
+          <td class="paramname"><em>addr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ソフトウエアブレークポイントを設定する。 </p>
+<p>ソフトウエアブレークポイントがヒットするとコールバックする。</p>
+<p>ソフトウエアブレークポイントを無効にする場合はaddrに0を指定する。</p>
+<p>ソフトウエアブレークポイントは、指定アドレスの命令をトラップ命令に置き換える。</p>
+<p>コード領域以外にソフトウエアブレークポイントを設定した場合の動作は不定になる。</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">index</td><td>ブレークポイントのインデックス番号、0から31 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">addr</td><td>アドレス</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">成功時はtrueを返す。失敗時はfalseを返す。</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="ga5c6a5e25ed45f46443e838376a118384" name="ga5c6a5e25ed45f46443e838376a118384"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga5c6a5e25ed45f46443e838376a118384">&#9670;&#160;</a></span>DcTargetConnect()</h2>
 
@@ -1064,6 +1179,52 @@ $(function() {
 <dl class="retval"><dt>戻り値</dt><dd>
   <table class="retval">
     <tr><td class="paramname">無し</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga30241f734341179dd5fa98ff39400464" name="ga30241f734341179dd5fa98ff39400464"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga30241f734341179dd5fa98ff39400464">&#9670;&#160;</a></span>DcWaitForTarget()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool DcWaitForTarget </td>
+          <td>(</td>
+          <td class="paramtype">u64&#160;</td>
+          <td class="paramname"><em>tid</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">u64&#160;</td>
+          <td class="paramname"><em>timeout</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>アプリケーションの起動を待つ。 </p>
+<p>timeoutで指定した時間を待って、アプリケーションが起動していればtrueを返す。</p>
+<p>timeoutに0を指定するとAPIはすぐに処理を返す。</p>
+<p><a class="el" href="group__dbgctrl.html#ga5c6a5e25ed45f46443e838376a118384" title="アプリケーションに接続する。">DcTargetConnect()</a>を行う前に、アプリケーションが起動しているかを確認することができる。</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">tid</td><td>タイトルID </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">timeout</td><td>タイムアウト、マイクロ秒単位</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">動作時はtrueを返す。未動作時はfalseを返す。</td><td></td></tr>
   </table>
   </dd>
 </dl>

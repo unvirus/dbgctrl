@@ -94,10 +94,20 @@ $(function() {
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
 列挙型</h2></td></tr>
-<tr class="memitem:ga8fbaa92b672b110f3adc007ab2782b21" id="r_ga8fbaa92b672b110f3adc007ab2782b21"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dbgctrl.html#ga8fbaa92b672b110f3adc007ab2782b21">DEBUG_EVENT</a> { <a class="el" href="group__dbgctrl.html#gga8fbaa92b672b110f3adc007ab2782b21a997c55781b6169cba76db9f6decfdf40">EVT_TARGET_CONNECT</a> = 0
+<tr class="memitem:ga8fbaa92b672b110f3adc007ab2782b21" id="r_ga8fbaa92b672b110f3adc007ab2782b21"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dbgctrl.html#ga8fbaa92b672b110f3adc007ab2782b21">DEBUG_EVENT</a> { <br />
+&#160;&#160;<a class="el" href="group__dbgctrl.html#gga8fbaa92b672b110f3adc007ab2782b21a997c55781b6169cba76db9f6decfdf40">EVT_TARGET_CONNECT</a> = 0
 , <a class="el" href="group__dbgctrl.html#gga8fbaa92b672b110f3adc007ab2782b21ae94a7f5e45c7eacb63f1a597d793f448">EVT_TARGET_DISCONNECT</a>
 , <a class="el" href="group__dbgctrl.html#gga8fbaa92b672b110f3adc007ab2782b21a22b26075cc87db9229a86cb0335e7e2b">EVT_BREAK_POINT</a>
 , <a class="el" href="group__dbgctrl.html#gga8fbaa92b672b110f3adc007ab2782b21a3f80e4793a0f6e201475874c631ac8d2">EVT_WATCH_POINT</a>
+, <br />
+&#160;&#160;<a class="el" href="group__dbgctrl.html#gga8fbaa92b672b110f3adc007ab2782b21ae247528d8fb4f73ef4c0b2372ce23330">EVT_SW_BREAK_POINT</a>
+, <a class="el" href="group__dbgctrl.html#gga8fbaa92b672b110f3adc007ab2782b21a6c299b8db1b6274576ab3d8dae488777">EVT_TRAP</a>
+, <a class="el" href="group__dbgctrl.html#gga8fbaa92b672b110f3adc007ab2782b21a8635bad0c010a61e2f50ee5d0b1f2d92">EVT_PREFETCH_ABORT</a>
+, <a class="el" href="group__dbgctrl.html#gga8fbaa92b672b110f3adc007ab2782b21ad6c829390f4e7f048bd676dddcd70c06">EVT_DATA_ABORT</a>
+, <br />
+&#160;&#160;<a class="el" href="group__dbgctrl.html#gga8fbaa92b672b110f3adc007ab2782b21aad2bc5adb298026745d1f9c8937bf06a">EVT_ALIGNMENT_FAULT</a>
+, <a class="el" href="group__dbgctrl.html#gga8fbaa92b672b110f3adc007ab2782b21acd45382e94420dc81605bbb10f1463c8">EVT_PAUSE</a>
+<br />
  }</td></tr>
 <tr class="memdesc:ga8fbaa92b672b110f3adc007ab2782b21"><td class="mdescLeft">&#160;</td><td class="mdescRight">コールバックイベント  <a href="group__dbgctrl.html#ga8fbaa92b672b110f3adc007ab2782b21">[詳解]</a><br /></td></tr>
 <tr class="separator:ga8fbaa92b672b110f3adc007ab2782b21"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -150,6 +160,9 @@ $(function() {
 <tr class="memitem:ga3ae569f087036d897f97340d5e040a3e" id="r_ga3ae569f087036d897f97340d5e040a3e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dbgctrl.html#ga3ae569f087036d897f97340d5e040a3e">DcDebugContinue</a> (u64 thread_id)</td></tr>
 <tr class="memdesc:ga3ae569f087036d897f97340d5e040a3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">実行を再開する。  <br /></td></tr>
 <tr class="separator:ga3ae569f087036d897f97340d5e040a3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga512e76e63d207dcebf4781563b05fb30" id="r_ga512e76e63d207dcebf4781563b05fb30"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dbgctrl.html#ga512e76e63d207dcebf4781563b05fb30">DcDebugPause</a> (void)</td></tr>
+<tr class="memdesc:ga512e76e63d207dcebf4781563b05fb30"><td class="mdescLeft">&#160;</td><td class="mdescRight">アプリケーションを一時停止する。  <br /></td></tr>
+<tr class="separator:ga512e76e63d207dcebf4781563b05fb30"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gafa1edd9b9c097efde9206c32db6c282c" id="r_gafa1edd9b9c097efde9206c32db6c282c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dbgctrl.html#gafa1edd9b9c097efde9206c32db6c282c">DcMemRead</a> (u64 addr, void *data, u64 len)</td></tr>
 <tr class="memdesc:gafa1edd9b9c097efde9206c32db6c282c"><td class="mdescLeft">&#160;</td><td class="mdescRight">メモリを読み込む。  <br /></td></tr>
 <tr class="separator:gafa1edd9b9c097efde9206c32db6c282c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -175,8 +188,11 @@ $(function() {
 <tr class="memdesc:ga4188b18aa78da84f92d80dc2bbf51383"><td class="mdescLeft">&#160;</td><td class="mdescRight">ライブラリバージョンを取得する。  <br /></td></tr>
 <tr class="separator:ga4188b18aa78da84f92d80dc2bbf51383"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaa42226ed7e15aa6cfa663a87817fa923" id="r_gaa42226ed7e15aa6cfa663a87817fa923"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dbgctrl.html#gaa42226ed7e15aa6cfa663a87817fa923">DcBreakPoint</a> (u32 index, u64 addr)</td></tr>
-<tr class="memdesc:gaa42226ed7e15aa6cfa663a87817fa923"><td class="mdescLeft">&#160;</td><td class="mdescRight">ブレークポイントを設定する。  <br /></td></tr>
+<tr class="memdesc:gaa42226ed7e15aa6cfa663a87817fa923"><td class="mdescLeft">&#160;</td><td class="mdescRight">ハードウエアブレークポイントを設定する。  <br /></td></tr>
 <tr class="separator:gaa42226ed7e15aa6cfa663a87817fa923"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5a5a5bee33d188f637a1626f9327a43f" id="r_ga5a5a5bee33d188f637a1626f9327a43f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dbgctrl.html#ga5a5a5bee33d188f637a1626f9327a43f">DcSwBreakPoint</a> (u32 index, u64 addr)</td></tr>
+<tr class="memdesc:ga5a5a5bee33d188f637a1626f9327a43f"><td class="mdescLeft">&#160;</td><td class="mdescRight">ソフトウエアブレークポイントを設定する。  <br /></td></tr>
+<tr class="separator:ga5a5a5bee33d188f637a1626f9327a43f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gadd2cb961bdc5acf7073397cb9b5fc249" id="r_gadd2cb961bdc5acf7073397cb9b5fc249"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dbgctrl.html#gadd2cb961bdc5acf7073397cb9b5fc249">DcWatchPoint</a> (u32 index, u64 addr, <a class="el" href="group__dbgctrl.html#ga1d9128302618cb4dc1ad6712e7758b69">WATCH_POINT_DIR</a> dir, <a class="el" href="group__dbgctrl.html#gacd0a4168bef2892463390ec7c40b3af3">WATCH_POINT_SIZE</a> size)</td></tr>
 <tr class="memdesc:gadd2cb961bdc5acf7073397cb9b5fc249"><td class="mdescLeft">&#160;</td><td class="mdescRight">ウオッチポイントを設定する。  <br /></td></tr>
 <tr class="separator:gadd2cb961bdc5acf7073397cb9b5fc249"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -186,6 +202,9 @@ $(function() {
 <tr class="memitem:ga0f726bedd90319a856799f3625ff3534" id="r_ga0f726bedd90319a856799f3625ff3534"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dbgctrl.html#ga0f726bedd90319a856799f3625ff3534">DcCodeWrite</a> (u64 addr, u32 *data)</td></tr>
 <tr class="memdesc:ga0f726bedd90319a856799f3625ff3534"><td class="mdescLeft">&#160;</td><td class="mdescRight">プログラムコードを書き込む。  <br /></td></tr>
 <tr class="separator:ga0f726bedd90319a856799f3625ff3534"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga30241f734341179dd5fa98ff39400464" id="r_ga30241f734341179dd5fa98ff39400464"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dbgctrl.html#ga30241f734341179dd5fa98ff39400464">DcWaitForTarget</a> (u64 tid, u64 timeout)</td></tr>
+<tr class="memdesc:ga30241f734341179dd5fa98ff39400464"><td class="mdescLeft">&#160;</td><td class="mdescRight">アプリケーションの起動を待つ。  <br /></td></tr>
+<tr class="separator:ga30241f734341179dd5fa98ff39400464"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
 <div class="textblock"><p>Debug Library header file </p>
