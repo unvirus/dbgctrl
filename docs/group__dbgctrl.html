@@ -212,6 +212,7 @@ $(function() {
 </div><div class="memdoc">
 
 <p>イベントコールバック。 </p>
+<p>コールバック内で、dbgctrlのAPIを呼ぶことができる。</p>
 <p>evtの値がEVT_BREAK_POINT、 EVT_WATCH_POINT、EVT_SW_BREAK_POINT</p>
 <p>EVT_TRAP、EVT_PREFETCH_ABORT、EVT_ALIGNMENT_FAULT、EVT_PAUSEの時はthread_id、addrに有効な値が入る。</p>
 <p>EVT_TARGET_CONNECT、EVT_TARGET_DISCONNECTの時はthread_id、addrは未使用で0になる。</p>
@@ -612,7 +613,7 @@ $(function() {
 <p>API成功時にaddrにアプリケーションのベースアドレスが入る。</p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[out]</td><td class="paramname">addr</td><td>ベースアドレス</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">addr</td><td>ベースアドレス</td></tr>
   </table>
   </dd>
 </dl>
@@ -831,7 +832,7 @@ $(function() {
 </p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">timeout</td><td>タイムアウト、マイクロ秒単位</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">timeout</td><td>タイムアウト、ナノ秒単位</td></tr>
   </table>
   </dd>
 </dl>
@@ -986,7 +987,7 @@ $(function() {
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">addr</td><td>アドレス </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">data</td><td>読み込みデータを格納するポインタ </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">data</td><td>読み込みデータを格納するポインタ </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">len</td><td>読み込みサイズ</td></tr>
   </table>
   </dd>
@@ -1036,7 +1037,7 @@ $(function() {
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">addr</td><td>アドレス </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">data</td><td>書き込みデータのポインタ </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">data</td><td>書き込みデータのポインタ </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">len</td><td>書き込みサイズ</td></tr>
   </table>
   </dd>
@@ -1218,7 +1219,7 @@ $(function() {
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">tid</td><td>タイトルID </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">timeout</td><td>タイムアウト、マイクロ秒単位</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">timeout</td><td>タイムアウト、ナノ秒単位</td></tr>
   </table>
   </dd>
 </dl>
