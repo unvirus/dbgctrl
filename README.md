@@ -3,8 +3,9 @@ Nintendo Switch Debugger Library(libdbgctrl.a).
 This is a library for creating a simple tiny debugger.  
 
 ## Change log  
-2024/02/20  
-Supported software breakpoints.  
+2024/06/22  
+Fixed the incorrect description.  
+The timeout value is in nanoseconds instead of microseconds.  
 
 ## API specifications  
 [Here](https://unvirus.github.io/dbgctrl/index.html)  
