@@ -5,7 +5,7 @@ This is a library for creating a simple tiny debugger.
 ## Change log  
 2024/06/22  
 Fixed the incorrect description.  
-The timeout value is in nanoseconds instead of microseconds.  
+The timeout value is nanoseconds instead of microseconds.  
 
 ## API specifications  
 [Here](https://unvirus.github.io/dbgctrl/index.html)  
