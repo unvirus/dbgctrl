@@ -102,6 +102,8 @@ typedef enum {
  @brief
     イベントコールバック。
 
+    コールバック内で、dbgctrlのAPIを呼ぶことができる。
+
     evtの値がEVT_BREAK_POINT、 EVT_WATCH_POINT、EVT_SW_BREAK_POINT
  
     EVT_TRAP、EVT_PREFETCH_ABORT、EVT_ALIGNMENT_FAULT、EVT_PAUSEの時はthread_id、addrに有効な値が入る。
@@ -109,7 +111,7 @@ typedef enum {
     EVT_TARGET_CONNECT、EVT_TARGET_DISCONNECTの時はthread_id、addrは未使用で0になる。
  
     evtの値がEVT_BREAK_POINT、 EVT_WATCH_POINT、EVT_SW_BREAK_POINTの時、DEBUG_CB_CONTINUEを返すと処理を続行する。
- 
+
     ただし、ブレークポイント、ウオッチポイントを設定したまま、DEBUG_CB_CONTINUEを返しても
  
     すぐに同じアドレスで再びコールバックが発生する。
@@ -244,7 +246,7 @@ void DcTargetDisconnect(void);
 
     timeoutに0を指定するとAPIはすぐに処理を返す。  
  
- @param [in]		timeout タイムアウト、マイクロ秒単位
+ @param [in]		timeout タイムアウト、ナノ秒単位
  
  @retval	動作時はtrueを返す。未動作時はfalseを返す。
  */
@@ -292,7 +294,7 @@ bool DcDebugPause(void);
     メモリを読み込む。
  
  @param [in]		addr アドレス
- @param [in]		data 読み込みデータを格納するポインタ
+ @param [out]		data 読み込みデータを格納するポインタ
  @param [in]		len 読み込みサイズ 
  
  @retval	成功時はtrueを返す。失敗時はfalseを返す。
@@ -305,7 +307,7 @@ bool DcMemRead(u64 addr, void *data, u64 len);
     メモリに書き込む。
  
  @param [in]		addr アドレス
- @param [out]		data 書き込みデータのポインタ
+ @param [in]		data 書き込みデータのポインタ
  @param [in]		len 書き込みサイズ 
  
  @retval	成功時はtrueを返す。失敗時はfalseを返す。
@@ -319,7 +321,7 @@ bool DcMemWrite(u64 addr, void *data, u64 len);
  
     API成功時にaddrにアプリケーションのベースアドレスが入る。
  
- @param [out]		addr ベースアドレス
+ @param [in]		addr ベースアドレス
  
  @retval	成功時はtrueを返す。失敗時はfalseを返す。
  */
@@ -500,7 +502,7 @@ bool DcCodeWrite(u64 addr, u32 *data);
     DcTargetConnect()を行う前に、アプリケーションが起動しているかを確認することができる。
  
  @param [in]		tid タイトルID
- @param [in]		timeout タイムアウト、マイクロ秒単位
+ @param [in]		timeout タイムアウト、ナノ秒単位
  
  @retval	動作時はtrueを返す。未動作時はfalseを返す。
  */
