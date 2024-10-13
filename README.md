@@ -2,7 +2,10 @@
 Nintendo Switch Debugger Library(libdbgctrl.a).  
 This is a library for creating a simple tiny debugger.  
 
-## Change log  
+## Change log 
+2024/10/13  
+Supported FW 1.19.0.
+  
 2024/06/22  
 Fixed the incorrect description.  
 The timeout value is nanoseconds instead of microseconds.  
