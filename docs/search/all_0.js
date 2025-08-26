@@ -2,7 +2,7 @@ var searchData=
 [
   ['dbgctrl_0',['dbgctrl',['../index.html',1,'dbgctrl'],['../group__dbgctrl.html',1,'Dbgctrl']]],
   ['dbgctrl_2eh_1',['dbgctrl.h',['../dbgctrl_8h.html',1,'']]],
-  ['dcbreakpoint_2',['DcBreakPoint',['../group__dbgctrl.html#gaa42226ed7e15aa6cfa663a87817fa923',1,'dbgctrl.h']]],
+  ['dcbreakpoint_2',['DcBreakPoint',['../group__dbgctrl.html#ga7b5aeb24943f3ee0b8667db89363259e',1,'dbgctrl.h']]],
   ['dccoderead_3',['DcCodeRead',['../group__dbgctrl.html#ga52501c4d5bb318adfc285633b841b4ce',1,'dbgctrl.h']]],
   ['dccodewrite_4',['DcCodeWrite',['../group__dbgctrl.html#ga0f726bedd90319a856799f3625ff3534',1,'dbgctrl.h']]],
   ['dcdebugcontinue_5',['DcDebugContinue',['../group__dbgctrl.html#ga3ae569f087036d897f97340d5e040a3e',1,'dbgctrl.h']]],
@@ -21,15 +21,17 @@ var searchData=
   ['dclogstop_18',['DcLogStop',['../group__dbgctrl.html#gac3905adf8f77b65991caa79e00816ced',1,'dbgctrl.h']]],
   ['dcmemread_19',['DcMemRead',['../group__dbgctrl.html#gafa1edd9b9c097efde9206c32db6c282c',1,'dbgctrl.h']]],
   ['dcmemwrite_20',['DcMemWrite',['../group__dbgctrl.html#ga78db29a6dc87100711302838a6f94aeb',1,'dbgctrl.h']]],
-  ['dcswbreakpoint_21',['DcSwBreakPoint',['../group__dbgctrl.html#ga5a5a5bee33d188f637a1626f9327a43f',1,'dbgctrl.h']]],
-  ['dctargetconnect_22',['DcTargetConnect',['../group__dbgctrl.html#ga5c6a5e25ed45f46443e838376a118384',1,'dbgctrl.h']]],
+  ['dcswbreakpoint_21',['DcSwBreakPoint',['../group__dbgctrl.html#ga2866bccb6f3024901bab7eeeaa651810',1,'dbgctrl.h']]],
+  ['dctargetconnect_22',['DcTargetConnect',['../group__dbgctrl.html#ga499aae37c44fa48c9840b0daed65266a',1,'dbgctrl.h']]],
   ['dctargetdisconnect_23',['DcTargetDisconnect',['../group__dbgctrl.html#gaae7f8e15a638c4fdc638a28fdd7c3501',1,'dbgctrl.h']]],
   ['dcwaitfortarget_24',['DcWaitForTarget',['../group__dbgctrl.html#ga30241f734341179dd5fa98ff39400464',1,'dbgctrl.h']]],
-  ['dcwatchpoint_25',['DcWatchPoint',['../group__dbgctrl.html#gadd2cb961bdc5acf7073397cb9b5fc249',1,'dbgctrl.h']]],
+  ['dcwatchpoint_25',['DcWatchPoint',['../group__dbgctrl.html#ga72100dbacb24af4b47f7aad80156165f',1,'dbgctrl.h']]],
   ['debug_5fcb_5fcontinue_26',['DEBUG_CB_CONTINUE',['../group__dbgctrl.html#gga98ac9bc714ccd4fced91fb25d1adb96ca9acb2929b331d63e667a4f38001add33',1,'dbgctrl.h']]],
   ['debug_5fcb_5ferror_27',['DEBUG_CB_ERROR',['../group__dbgctrl.html#gga98ac9bc714ccd4fced91fb25d1adb96ca59a389efb7f93e9e3d256953a15f63dc',1,'dbgctrl.h']]],
   ['debug_5fcb_5fstatus_28',['DEBUG_CB_STATUS',['../group__dbgctrl.html#ga98ac9bc714ccd4fced91fb25d1adb96c',1,'dbgctrl.h']]],
   ['debug_5fcb_5fstop_29',['DEBUG_CB_STOP',['../group__dbgctrl.html#gga98ac9bc714ccd4fced91fb25d1adb96ca6c367604a53e4411656f8e1fb1847964',1,'dbgctrl.h']]],
   ['debug_5fevent_30',['DEBUG_EVENT',['../group__dbgctrl.html#ga8fbaa92b672b110f3adc007ab2782b21',1,'dbgctrl.h']]],
-  ['debug_5fevent_5fcallback_31',['DEBUG_EVENT_CALLBACK',['../group__dbgctrl.html#ga4a7ee0f5910c89742a51c3a60e3b3808',1,'dbgctrl.h']]]
+  ['debug_5fevent_5fcallback_31',['DEBUG_EVENT_CALLBACK',['../group__dbgctrl.html#ga8f2858e4b65c5a5ba576d0eedef30f6a',1,'dbgctrl.h']]],
+  ['debug_5fprocess_5fexit_5freason_32',['DEBUG_PROCESS_EXIT_REASON',['../group__dbgctrl.html#gafc2f9184fb5713b2426e5ce310519c71',1,'dbgctrl.h']]],
+  ['debug_5fthread_5fexit_5freason_33',['DEBUG_THREAD_EXIT_REASON',['../group__dbgctrl.html#ga7133a2459c306d541d6265ddb903ad38',1,'dbgctrl.h']]]
 ];

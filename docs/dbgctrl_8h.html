@@ -88,12 +88,25 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
 型定義</h2></td></tr>
-<tr class="memitem:ga4a7ee0f5910c89742a51c3a60e3b3808" id="r_ga4a7ee0f5910c89742a51c3a60e3b3808"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="group__dbgctrl.html#ga98ac9bc714ccd4fced91fb25d1adb96c">DEBUG_CB_STATUS</a>(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dbgctrl.html#ga4a7ee0f5910c89742a51c3a60e3b3808">DEBUG_EVENT_CALLBACK</a>) (<a class="el" href="group__dbgctrl.html#ga8fbaa92b672b110f3adc007ab2782b21">DEBUG_EVENT</a> evt, u64 thread_id, u64 addr, void *arg)</td></tr>
-<tr class="memdesc:ga4a7ee0f5910c89742a51c3a60e3b3808"><td class="mdescLeft">&#160;</td><td class="mdescRight">イベントコールバック。  <br /></td></tr>
-<tr class="separator:ga4a7ee0f5910c89742a51c3a60e3b3808"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8f2858e4b65c5a5ba576d0eedef30f6a" id="r_ga8f2858e4b65c5a5ba576d0eedef30f6a"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="group__dbgctrl.html#ga98ac9bc714ccd4fced91fb25d1adb96c">DEBUG_CB_STATUS</a>(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dbgctrl.html#ga8f2858e4b65c5a5ba576d0eedef30f6a">DEBUG_EVENT_CALLBACK</a>) (<a class="el" href="group__dbgctrl.html#ga8fbaa92b672b110f3adc007ab2782b21">DEBUG_EVENT</a> evt, u64 thread_id, u64 arg1, u64 arg2)</td></tr>
+<tr class="memdesc:ga8f2858e4b65c5a5ba576d0eedef30f6a"><td class="mdescLeft">&#160;</td><td class="mdescRight">イベントコールバック。  <br /></td></tr>
+<tr class="separator:ga8f2858e4b65c5a5ba576d0eedef30f6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
 列挙型</h2></td></tr>
+<tr class="memitem:gafc2f9184fb5713b2426e5ce310519c71" id="r_gafc2f9184fb5713b2426e5ce310519c71"><td class="memItemLeft" align="right" valign="top"><a id="gafc2f9184fb5713b2426e5ce310519c71" name="gafc2f9184fb5713b2426e5ce310519c71"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dbgctrl.html#gafc2f9184fb5713b2426e5ce310519c71">DEBUG_PROCESS_EXIT_REASON</a> { <b>DEBUG_PROCESS_EXIT</b> = 0
+, <b>DEBUG_PROCESS_TERMINATE</b>
+, <b>DEBUG_PROCESS_EXCEPTION</b>
+ }</td></tr>
+<tr class="memdesc:gafc2f9184fb5713b2426e5ce310519c71"><td class="mdescLeft">&#160;</td><td class="mdescRight">プロセス終了理由 <br /></td></tr>
+<tr class="separator:gafc2f9184fb5713b2426e5ce310519c71"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7133a2459c306d541d6265ddb903ad38" id="r_ga7133a2459c306d541d6265ddb903ad38"><td class="memItemLeft" align="right" valign="top"><a id="ga7133a2459c306d541d6265ddb903ad38" name="ga7133a2459c306d541d6265ddb903ad38"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dbgctrl.html#ga7133a2459c306d541d6265ddb903ad38">DEBUG_THREAD_EXIT_REASON</a> { <b>DEBUG_THREAD_EXIT</b> = 0
+, <b>DEBUG_THREAD_TERMINATE</b>
+, <b>DEBUG_THREAD_EXIT_PROCESS</b>
+, <b>DEBUG_THREAD_TERMINATE_PROCESS</b>
+ }</td></tr>
+<tr class="memdesc:ga7133a2459c306d541d6265ddb903ad38"><td class="mdescLeft">&#160;</td><td class="mdescRight">スレッド終了理由 <br /></td></tr>
+<tr class="separator:ga7133a2459c306d541d6265ddb903ad38"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga8fbaa92b672b110f3adc007ab2782b21" id="r_ga8fbaa92b672b110f3adc007ab2782b21"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dbgctrl.html#ga8fbaa92b672b110f3adc007ab2782b21">DEBUG_EVENT</a> { <br />
 &#160;&#160;<a class="el" href="group__dbgctrl.html#gga8fbaa92b672b110f3adc007ab2782b21a997c55781b6169cba76db9f6decfdf40">EVT_TARGET_CONNECT</a> = 0
 , <a class="el" href="group__dbgctrl.html#gga8fbaa92b672b110f3adc007ab2782b21ae94a7f5e45c7eacb63f1a597d793f448">EVT_TARGET_DISCONNECT</a>
@@ -107,6 +120,10 @@ $(function() {
 , <br />
 &#160;&#160;<a class="el" href="group__dbgctrl.html#gga8fbaa92b672b110f3adc007ab2782b21aad2bc5adb298026745d1f9c8937bf06a">EVT_ALIGNMENT_FAULT</a>
 , <a class="el" href="group__dbgctrl.html#gga8fbaa92b672b110f3adc007ab2782b21acd45382e94420dc81605bbb10f1463c8">EVT_PAUSE</a>
+, <a class="el" href="group__dbgctrl.html#gga8fbaa92b672b110f3adc007ab2782b21a88117583648f35357555b59c67bd48d3">EVT_THREAD_ATTACH</a>
+, <a class="el" href="group__dbgctrl.html#gga8fbaa92b672b110f3adc007ab2782b21a4833478213220d3e7beefab2b1e042c4">EVT_THREAD_DETACH</a>
+, <br />
+&#160;&#160;<a class="el" href="group__dbgctrl.html#gga8fbaa92b672b110f3adc007ab2782b21a8a61bdb41b99111932ca3a7433fb8d8f">EVT_INVALID_SVC</a>
 <br />
  }</td></tr>
 <tr class="memdesc:ga8fbaa92b672b110f3adc007ab2782b21"><td class="mdescLeft">&#160;</td><td class="mdescRight">コールバックイベント  <a href="group__dbgctrl.html#ga8fbaa92b672b110f3adc007ab2782b21">[詳解]</a><br /></td></tr>
@@ -148,9 +165,9 @@ $(function() {
 <tr class="memitem:ga42ade5ab84122e8a90685605f7648c60" id="r_ga42ade5ab84122e8a90685605f7648c60"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dbgctrl.html#ga42ade5ab84122e8a90685605f7648c60">DcLogPrint</a> (const char *fmt,...)</td></tr>
 <tr class="memdesc:ga42ade5ab84122e8a90685605f7648c60"><td class="mdescLeft">&#160;</td><td class="mdescRight">ログを出力する。  <br /></td></tr>
 <tr class="separator:ga42ade5ab84122e8a90685605f7648c60"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga5c6a5e25ed45f46443e838376a118384" id="r_ga5c6a5e25ed45f46443e838376a118384"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dbgctrl.html#ga5c6a5e25ed45f46443e838376a118384">DcTargetConnect</a> (u64 tid, s32 priority, <a class="el" href="group__dbgctrl.html#ga4a7ee0f5910c89742a51c3a60e3b3808">DEBUG_EVENT_CALLBACK</a> callback, void *arg)</td></tr>
-<tr class="memdesc:ga5c6a5e25ed45f46443e838376a118384"><td class="mdescLeft">&#160;</td><td class="mdescRight">アプリケーションに接続する。  <br /></td></tr>
-<tr class="separator:ga5c6a5e25ed45f46443e838376a118384"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga499aae37c44fa48c9840b0daed65266a" id="r_ga499aae37c44fa48c9840b0daed65266a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dbgctrl.html#ga499aae37c44fa48c9840b0daed65266a">DcTargetConnect</a> (u64 tid, s32 priority, <a class="el" href="group__dbgctrl.html#ga8f2858e4b65c5a5ba576d0eedef30f6a">DEBUG_EVENT_CALLBACK</a> callback)</td></tr>
+<tr class="memdesc:ga499aae37c44fa48c9840b0daed65266a"><td class="mdescLeft">&#160;</td><td class="mdescRight">アプリケーションに接続する。  <br /></td></tr>
+<tr class="separator:ga499aae37c44fa48c9840b0daed65266a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaae7f8e15a638c4fdc638a28fdd7c3501" id="r_gaae7f8e15a638c4fdc638a28fdd7c3501"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dbgctrl.html#gaae7f8e15a638c4fdc638a28fdd7c3501">DcTargetDisconnect</a> (void)</td></tr>
 <tr class="memdesc:gaae7f8e15a638c4fdc638a28fdd7c3501"><td class="mdescLeft">&#160;</td><td class="mdescRight">アプリケーションから切断する。  <br /></td></tr>
 <tr class="separator:gaae7f8e15a638c4fdc638a28fdd7c3501"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -187,15 +204,15 @@ $(function() {
 <tr class="memitem:ga4188b18aa78da84f92d80dc2bbf51383" id="r_ga4188b18aa78da84f92d80dc2bbf51383"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dbgctrl.html#ga4188b18aa78da84f92d80dc2bbf51383">DcGetVersion</a> (void)</td></tr>
 <tr class="memdesc:ga4188b18aa78da84f92d80dc2bbf51383"><td class="mdescLeft">&#160;</td><td class="mdescRight">ライブラリバージョンを取得する。  <br /></td></tr>
 <tr class="separator:ga4188b18aa78da84f92d80dc2bbf51383"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaa42226ed7e15aa6cfa663a87817fa923" id="r_gaa42226ed7e15aa6cfa663a87817fa923"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dbgctrl.html#gaa42226ed7e15aa6cfa663a87817fa923">DcBreakPoint</a> (u32 index, u64 addr)</td></tr>
-<tr class="memdesc:gaa42226ed7e15aa6cfa663a87817fa923"><td class="mdescLeft">&#160;</td><td class="mdescRight">ハードウエアブレークポイントを設定する。  <br /></td></tr>
-<tr class="separator:gaa42226ed7e15aa6cfa663a87817fa923"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga5a5a5bee33d188f637a1626f9327a43f" id="r_ga5a5a5bee33d188f637a1626f9327a43f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dbgctrl.html#ga5a5a5bee33d188f637a1626f9327a43f">DcSwBreakPoint</a> (u32 index, u64 addr)</td></tr>
-<tr class="memdesc:ga5a5a5bee33d188f637a1626f9327a43f"><td class="mdescLeft">&#160;</td><td class="mdescRight">ソフトウエアブレークポイントを設定する。  <br /></td></tr>
-<tr class="separator:ga5a5a5bee33d188f637a1626f9327a43f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gadd2cb961bdc5acf7073397cb9b5fc249" id="r_gadd2cb961bdc5acf7073397cb9b5fc249"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dbgctrl.html#gadd2cb961bdc5acf7073397cb9b5fc249">DcWatchPoint</a> (u32 index, u64 addr, <a class="el" href="group__dbgctrl.html#ga1d9128302618cb4dc1ad6712e7758b69">WATCH_POINT_DIR</a> dir, <a class="el" href="group__dbgctrl.html#gacd0a4168bef2892463390ec7c40b3af3">WATCH_POINT_SIZE</a> size)</td></tr>
-<tr class="memdesc:gadd2cb961bdc5acf7073397cb9b5fc249"><td class="mdescLeft">&#160;</td><td class="mdescRight">ウオッチポイントを設定する。  <br /></td></tr>
-<tr class="separator:gadd2cb961bdc5acf7073397cb9b5fc249"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7b5aeb24943f3ee0b8667db89363259e" id="r_ga7b5aeb24943f3ee0b8667db89363259e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dbgctrl.html#ga7b5aeb24943f3ee0b8667db89363259e">DcBreakPoint</a> (u32 index, u64 addr, u64 arg)</td></tr>
+<tr class="memdesc:ga7b5aeb24943f3ee0b8667db89363259e"><td class="mdescLeft">&#160;</td><td class="mdescRight">ハードウエアブレークポイントを設定する。  <br /></td></tr>
+<tr class="separator:ga7b5aeb24943f3ee0b8667db89363259e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2866bccb6f3024901bab7eeeaa651810" id="r_ga2866bccb6f3024901bab7eeeaa651810"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dbgctrl.html#ga2866bccb6f3024901bab7eeeaa651810">DcSwBreakPoint</a> (u32 index, u64 addr, u64 arg)</td></tr>
+<tr class="memdesc:ga2866bccb6f3024901bab7eeeaa651810"><td class="mdescLeft">&#160;</td><td class="mdescRight">ソフトウエアブレークポイントを設定する。  <br /></td></tr>
+<tr class="separator:ga2866bccb6f3024901bab7eeeaa651810"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga72100dbacb24af4b47f7aad80156165f" id="r_ga72100dbacb24af4b47f7aad80156165f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dbgctrl.html#ga72100dbacb24af4b47f7aad80156165f">DcWatchPoint</a> (u32 index, u64 addr, <a class="el" href="group__dbgctrl.html#ga1d9128302618cb4dc1ad6712e7758b69">WATCH_POINT_DIR</a> dir, <a class="el" href="group__dbgctrl.html#gacd0a4168bef2892463390ec7c40b3af3">WATCH_POINT_SIZE</a> size, u64 arg)</td></tr>
+<tr class="memdesc:ga72100dbacb24af4b47f7aad80156165f"><td class="mdescLeft">&#160;</td><td class="mdescRight">ウオッチポイントを設定する。  <br /></td></tr>
+<tr class="separator:ga72100dbacb24af4b47f7aad80156165f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga52501c4d5bb318adfc285633b841b4ce" id="r_ga52501c4d5bb318adfc285633b841b4ce"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dbgctrl.html#ga52501c4d5bb318adfc285633b841b4ce">DcCodeRead</a> (u64 addr, u32 *data)</td></tr>
 <tr class="memdesc:ga52501c4d5bb318adfc285633b841b4ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">プログラムコードを読み込む。  <br /></td></tr>
 <tr class="separator:ga52501c4d5bb318adfc285633b841b4ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -209,7 +226,7 @@ $(function() {
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
 <div class="textblock"><p>Debug Library header file </p>
 <dl class="section author"><dt>著者</dt><dd>unvirus </dd></dl>
-<dl class="section date"><dt>日付</dt><dd>2023/12/01 </dd></dl>
+<dl class="section date"><dt>日付</dt><dd>2025/08/07 </dd></dl>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

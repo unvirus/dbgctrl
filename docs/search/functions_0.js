@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['dcbreakpoint_0',['DcBreakPoint',['../group__dbgctrl.html#gaa42226ed7e15aa6cfa663a87817fa923',1,'dbgctrl.h']]],
+  ['dcbreakpoint_0',['DcBreakPoint',['../group__dbgctrl.html#ga7b5aeb24943f3ee0b8667db89363259e',1,'dbgctrl.h']]],
   ['dccoderead_1',['DcCodeRead',['../group__dbgctrl.html#ga52501c4d5bb318adfc285633b841b4ce',1,'dbgctrl.h']]],
   ['dccodewrite_2',['DcCodeWrite',['../group__dbgctrl.html#ga0f726bedd90319a856799f3625ff3534',1,'dbgctrl.h']]],
   ['dcdebugcontinue_3',['DcDebugContinue',['../group__dbgctrl.html#ga3ae569f087036d897f97340d5e040a3e',1,'dbgctrl.h']]],
@@ -19,9 +19,9 @@ var searchData=
   ['dclogstop_16',['DcLogStop',['../group__dbgctrl.html#gac3905adf8f77b65991caa79e00816ced',1,'dbgctrl.h']]],
   ['dcmemread_17',['DcMemRead',['../group__dbgctrl.html#gafa1edd9b9c097efde9206c32db6c282c',1,'dbgctrl.h']]],
   ['dcmemwrite_18',['DcMemWrite',['../group__dbgctrl.html#ga78db29a6dc87100711302838a6f94aeb',1,'dbgctrl.h']]],
-  ['dcswbreakpoint_19',['DcSwBreakPoint',['../group__dbgctrl.html#ga5a5a5bee33d188f637a1626f9327a43f',1,'dbgctrl.h']]],
-  ['dctargetconnect_20',['DcTargetConnect',['../group__dbgctrl.html#ga5c6a5e25ed45f46443e838376a118384',1,'dbgctrl.h']]],
+  ['dcswbreakpoint_19',['DcSwBreakPoint',['../group__dbgctrl.html#ga2866bccb6f3024901bab7eeeaa651810',1,'dbgctrl.h']]],
+  ['dctargetconnect_20',['DcTargetConnect',['../group__dbgctrl.html#ga499aae37c44fa48c9840b0daed65266a',1,'dbgctrl.h']]],
   ['dctargetdisconnect_21',['DcTargetDisconnect',['../group__dbgctrl.html#gaae7f8e15a638c4fdc638a28fdd7c3501',1,'dbgctrl.h']]],
   ['dcwaitfortarget_22',['DcWaitForTarget',['../group__dbgctrl.html#ga30241f734341179dd5fa98ff39400464',1,'dbgctrl.h']]],
-  ['dcwatchpoint_23',['DcWatchPoint',['../group__dbgctrl.html#gadd2cb961bdc5acf7073397cb9b5fc249',1,'dbgctrl.h']]]
+  ['dcwatchpoint_23',['DcWatchPoint',['../group__dbgctrl.html#ga72100dbacb24af4b47f7aad80156165f',1,'dbgctrl.h']]]
 ];
