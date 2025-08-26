@@ -3,6 +3,9 @@ Nintendo Switch Debugger Library(libdbgctrl.a).
 This is a library for creating a simple tiny debugger.  
 
 ## Change log 
+2025/08/26  
+Small bug fix.  
+  
 2024/10/13  
 Supported FW 1.19.0.
   
