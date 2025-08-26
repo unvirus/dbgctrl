@@ -55,7 +55,7 @@ void userAppExit(void)
 }
 #endif
 
-static DEBUG_CB_STATUS DebugCallback(DEBUG_EVENT evt, u64 thread_id, u64 addr, void* arg)
+static DEBUG_CB_STATUS DebugCallback(DEBUG_EVENT evt, u64 thread_id, u64 arg1, u64 arg2 )
 {
     DEBUG_CB_STATUS cbr;
 
@@ -124,7 +124,7 @@ int main(int argc, char* argv[])
         // return true if target is found
     } while (b == false);
     
-    b = DcTargetConnect(TARGET_TITLE_ID, 48, DebugCallback, NULL);
+    b = DcTargetConnect(TARGET_TITLE_ID, 48, DebugCallback);
     if (b == false)
     {
         DcLogPrint("DcTargetConnect error\n");

@@ -2,7 +2,7 @@
  * dbgctrl.h
  *
  * Debug Library header
- * Copyright (c) 2022-2024 unvirus
+ * Copyright (c) 2022-2025 unvirus
  * Released under the MIT license
  *
  */
@@ -12,7 +12,7 @@
  @brief	Debug Library header file
 
  @author  unvirus
- @date    2023/12/01
+ @date    2025/08/07
 */
 
 /*! @addtogroup dbgctrl */
@@ -33,6 +33,25 @@
 extern "C"
 {
 #endif
+
+/*! @enum	DEBUG_PROCESS_EXIT_REASON
+    @brief	プロセス終了理由
+*/
+typedef enum {
+    DEBUG_PROCESS_EXIT = 0,
+    DEBUG_PROCESS_TERMINATE,
+    DEBUG_PROCESS_EXCEPTION,
+} DEBUG_PROCESS_EXIT_REASON;
+
+/*! @enum	DEBUG_THREAD_EXIT_REASON
+    @brief	スレッド終了理由
+*/
+typedef enum {
+    DEBUG_THREAD_EXIT = 0,
+    DEBUG_THREAD_TERMINATE,
+    DEBUG_THREAD_EXIT_PROCESS,
+    DEBUG_THREAD_TERMINATE_PROCESS,
+} DEBUG_THREAD_EXIT_REASON;
 
 /*! @enum	DEBUG_EVENT
     @brief	コールバックイベント
@@ -58,6 +77,12 @@ typedef enum {
     EVT_ALIGNMENT_FAULT,
     //! 一時停止
     EVT_PAUSE,
+    //! スレッド開始
+    EVT_THREAD_ATTACH,
+    //! スレッド終了
+    EVT_THREAD_DETACH,
+    //! 無効なSVC
+    EVT_INVALID_SVC,
 } DEBUG_EVENT;
 
 /*! @enum	WATCH_POINT_DIR
@@ -104,26 +129,41 @@ typedef enum {
 
     コールバック内で、dbgctrlのAPIを呼ぶことができる。
 
-    evtの値がEVT_BREAK_POINT、 EVT_WATCH_POINT、EVT_SW_BREAK_POINT
- 
-    EVT_TRAP、EVT_PREFETCH_ABORT、EVT_ALIGNMENT_FAULT、EVT_PAUSEの時はthread_id、addrに有効な値が入る。
- 
-    EVT_TARGET_CONNECT、EVT_TARGET_DISCONNECTの時はthread_id、addrは未使用で0になる。
- 
-    evtの値がEVT_BREAK_POINT、 EVT_WATCH_POINT、EVT_SW_BREAK_POINTの時、DEBUG_CB_CONTINUEを返すと処理を続行する。
+    evtの値がEVT_TARGET_CONNECTの時は、hread_id、arg1、arg2は0。
 
-    ただし、ブレークポイント、ウオッチポイントを設定したまま、DEBUG_CB_CONTINUEを返しても
- 
-    すぐに同じアドレスで再びコールバックが発生する。
- 
-    DEBUG_CB_STOPを返すと処理は中断したままになる。
- 
-    このとき後で、DcDebugContinue()を呼ぶことで処理を再開する。
- 
+    evtの値がEVT_TARGET_DISCONNECTの時はhread_idは0、arg1は切断理由、arg2は0。
+
+    evtの値がEVT_BREAK_POINTの時は、thread_idは対象のスレッドID。arg1はブレークしたアドレス。arg2はDcBreakPoint()
+    のarg値。
+
+    evtの値がEVT_WATCH_POINTの時は、thread_idは対象のスレッドID。arg1はブレークしたアドレス。arg2はDcWatchPoint()
+    のarg値。
+
+    evtの値がEVT_SW_BREAK_POINTの時は、thread_idは対象のスレッドID。arg1はブレークしたアドレス。arg2はDcSWBreakPoint()
+    のarg値。
+
+    evtの値がEVT_TRAPの時は、thread_id、addrに有効な値が入る。argは0になる。
+
+    evtの値がEVT_PREFETCH_ABORTの時は、thread_id、addrに有効な値が入る。argは0になる。
+
+    evtの値がEVT_DATA_ABORTの時は、thread_id、addrに有効な値が入る。argは0になる。
+
+    evtの値がEVT_ALIGNMENT_FAULTの時は、thread_id、addrに有効な値が入る。argは0になる。
+
+    evtの値がEVT_PAUSEの時は、thread_id、addrに有効な値が入る。argは0になる。
+
+    evtの値がEVT_THREAD_ATTACHの時は、thread_idに有効な値が入る。arg1はTLSのアドレス。arg2は0。
+
+    evtの値がEVT_THREAD_DETACHの時は、thread_idに有効な値が入る。arg1は切断理由。arg2は0。
+
+    コールバックの戻り値は、DEBUG_CB_CONTINUEを返すと処理を再開する。
+
+    DEBUG_CB_STOPを返すと処理は中断したままになる。後で、DcDebugContinue()を呼ぶことで処理を再開する。
+
     DEBUG_CB_ERRORを返すとデバッグ処理は中断し、DcIsProcessing()はfalseを返す。
- 
-    argはDcTargetConnect()で指定した引数が入る。
- 
+
+    ブレークポイント、ウオッチポイントがヒットした場合、処理を再開するには該当するブレークポイント、ウオッチポイントを解除する必要がある。
+
     呼び出し元のスレッドのスタックサイズは16KB。
 
  @param [out]		evt イベント	
@@ -133,7 +173,7 @@ typedef enum {
  
  @retval	コールバックステータス
  */
-typedef DEBUG_CB_STATUS (*DEBUG_EVENT_CALLBACK)(DEBUG_EVENT evt, u64 thread_id, u64 addr, void *arg);
+typedef DEBUG_CB_STATUS (*DEBUG_EVENT_CALLBACK)(DEBUG_EVENT evt, u64 thread_id, u64 arg1, u64 arg2);
 
 /*!
  @brief
@@ -213,16 +253,13 @@ bool DcLogPrint(const char *fmt, ...);
  
     sysmodule.jsonの設定に依存する。
  
-    argは任意の値を設定可能。使用しない場合はNULLを指定する。 
- 
  @param [in]		tid タイトルID
  @param [in]		priority 24から59を指定
  @param [in]		callback コールバックハンドラ
- @param [in]		arg 引数、オプション
  
  @retval	成功時はtrueを返す。失敗時はfalseを返す。
  */
-bool DcTargetConnect(u64 tid, s32 priority, DEBUG_EVENT_CALLBACK callback, void *arg);
+bool DcTargetConnect(u64 tid, s32 priority, DEBUG_EVENT_CALLBACK callback);
 
 /*!
  @brief
@@ -402,11 +439,12 @@ unsigned int DcGetVersion(void);
     ハードウエアブレークポイントを無効にする場合はaddrに0を指定する。
  
  @param [in]		index ブレークポイントのインデックス番号、0から3
- @param [in]		addr アドレス 
+ @param [in]		addr アドレス
+ @param [in]		arg 任意の引数
  
  @retval	成功時はtrueを返す。失敗時はfalseを返す。
  */
-bool DcBreakPoint(u32 index, u64 addr);
+bool DcBreakPoint(u32 index, u64 addr, u64 arg);
 
 /*!
  @brief
@@ -422,11 +460,12 @@ bool DcBreakPoint(u32 index, u64 addr);
     コード領域以外にソフトウエアブレークポイントを設定した場合の動作は不定になる。
  
  @param [in]		index ブレークポイントのインデックス番号、0から31
- @param [in]		addr アドレス 
+ @param [in]		addr アドレス
+ @param [in]		arg 任意の引数
  
  @retval	成功時はtrueを返す。失敗時はfalseを返す。
  */
-bool DcSwBreakPoint(u32 index, u64 addr);
+bool DcSwBreakPoint(u32 index, u64 addr, u64 arg);
 
 /*!
  @brief
@@ -441,10 +480,11 @@ bool DcSwBreakPoint(u32 index, u64 addr);
  @param [in]		addr アドレス
  @param [in]		dir 方向
  @param [in]		size アクセスサイズ
+ @param [in]		arg 任意の引数
  
  @retval	成功時はtrueを返す。失敗時はfalseを返す。
  */
-bool DcWatchPoint(u32 index, u64 addr, WATCH_POINT_DIR dir, WATCH_POINT_SIZE size);
+bool DcWatchPoint(u32 index, u64 addr, WATCH_POINT_DIR dir, WATCH_POINT_SIZE size, u64 arg);
 
 /*!
  @brief
